@@ -1,0 +1,35 @@
+{
+    "name": "qtcreator-classic-color-theme",
+    "displayName": "QtCreator's classic default color theme",
+    "description": "A theme similar to QtCreator's classic default theme but with some adjustments",
+    "publisher": "magiruuvelvet",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.53.0"
+    },
+    "galleryBanner": {
+        "color": "#00801f",
+        "theme": "light"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "keywords": [
+        "Qt theme",
+        "Qt color",
+        "Qt syntax highlight",
+        "QtCreator theme",
+        "QtCreator color",
+        "QtCreator syntax highlight",
+        "Light theme"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "QtCreator classic default",
+                "uiTheme": "vs",
+                "path": "./themes/QtCreator default-color-theme.json"
+            }
+        ]
+    }
+}
