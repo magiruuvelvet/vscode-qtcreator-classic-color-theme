@@ -134,7 +134,10 @@
             "name": "Keywords: macros like ifdef, endif, include",
             "scope": [
                 "keyword.control.directive",
-                "entity.name.function.preprocessor"
+                "entity.name.function.preprocessor",
+                "punctuation.definition.directive.cpp",
+                "meta.preprocessor.include.cpp",
+                "meta.preprocessor.macro.cpp"
             ],
             "settings": {
                 "foreground": "#000080"
@@ -228,7 +231,9 @@
                 "variable.other.constant.ruby",
                 "entity.name.type.ts",
                 "entity.name.type.js",
-                "entity.name.type.cpp"
+                "entity.name.type.cpp",
+                "entity.name.type.enum.cpp",
+                "variable.other.enummember.cpp"
             ],
             "settings": {
                 "foreground": "#8d268f"
@@ -361,7 +366,8 @@
             "scope": [
                 "support.class",
                 "entity.name.class",
-                "entity.name.module"
+                "entity.name.module",
+                "entity.name.type.struct.cpp"
             ],
             "settings": {
                 "foreground": "#8d268f"
@@ -446,7 +452,9 @@
             "scope": [
                 "constant.numeric",
                 "constant.character",
-                "constant"
+                "constant",
+                "keyword.other.unit.suffix.integer.cpp",
+                "keyword.other.unit.hexadecimal.cpp"
             ],
             "settings": {
                 "foreground": "#000080"
@@ -891,6 +899,16 @@
             "settings": {
                 "foreground": "#808000",
                 "fontStyle": "normal"
+            }
+        },
+        {
+            "name": "C++: reference and pointer",
+            "scope": [
+                "storage.modifier.reference.cpp",
+                "storage.modifier.pointer.cpp"
+            ],
+            "settings": {
+                "foreground": "#000000"
             }
         }
     ],
