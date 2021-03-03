@@ -221,10 +221,11 @@
             }
         },
         {
-            "name": "Types: support type",
+            "name": "Types: support types, aliased types, language constants, etc.",
             "scope": [
                 "support.type",
                 "constant.language.symbol.hashkey.ruby",
+                "variable.other.constant.ruby",
                 "entity.name.type.ts",
                 "entity.name.type.js",
                 "entity.name.type.cpp"
@@ -776,6 +777,17 @@
             ],
             "settings": {
                 "foreground": "#000000",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Ruby: HEREDOC",
+            "scope": [
+                "string.unquoted.heredoc.ruby punctuation.definition.string.begin.ruby",
+                "string.unquoted.heredoc.ruby punctuation.definition.string.end.ruby"
+            ],
+            "settings": {
+                "foreground": "#c82479",
                 "fontStyle": "bold"
             }
         },
