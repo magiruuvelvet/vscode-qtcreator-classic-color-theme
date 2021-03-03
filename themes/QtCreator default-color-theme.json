@@ -22,6 +22,10 @@
         "editorLineNumber.background": "#efebe7",
         "editorLineNumber.activeForeground": "#454749",
         "editorGutter.background": "#f7f7f7",
+        "editorGutter.modifiedBackground": "#fdbc4b",
+        "editorGutter.addedBackground": "#2ecc71",
+        "breadcrumb.background": "#f7f7f7",
+        "breadcrumb.foreground": "#000000",
         "editor.selectionBackground": "#d8d8d8",
         "editor.selectionForeground": "#000000",
         "editor.inactiveSelectionBackground": "#d8d8d873",
@@ -475,7 +479,8 @@
                 "punctuation.section.embedded.begin",
                 "punctuation.section.embedded.end",
                 "punctuation.definition.template-expression.begin",
-                "punctuation.definition.template-expression.end"
+                "punctuation.definition.template-expression.end",
+                "text.slim punctuation.section.embedded.ruby"
             ],
             "settings": {
                 "foreground": "#aaaaaada",
