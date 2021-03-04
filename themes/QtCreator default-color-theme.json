@@ -63,7 +63,7 @@
         "dropdown.border": "#0c66ee",
         "dropdown.background": "#ffffff",
         "dropdown.foreground": "#000000",
-        "progressBar.background": "#0c66ee",
+        "progressBar.background": "#0c66ee"
     },
     "tokenColors": [
         {
@@ -575,7 +575,7 @@
             "name": "HTML: Attribute Names",
             "scope": [
                 "meta.tag entity.other.attribute-name",
-                "entity.other.attribute-name.html",
+                "entity.other.attribute-name.html"
             ],
             "settings": {
                 "foreground": "#5484cb",
@@ -622,13 +622,14 @@
                 "support.constant.property-value"
             ],
             "settings": {
-                "foreground": "#448C27"
+                "foreground": "#000000"
             }
         },
         {
             "name": "CSS: Important Keyword",
             "scope": "keyword.other.important",
             "settings": {
+                "foreground": "#ce3102",
                 "fontStyle": "bold"
             }
         },
@@ -858,6 +859,13 @@
             "settings": {
                 "foreground": "#8d268f",
                 "fontStyle": "normal"
+            }
+        },
+        {
+            "name": "YAML: unquoted strings / values",
+            "scope": "source.yaml string.unquoted.plain.out.yaml",
+            "settings": {
+                "foreground": "#000000"
             }
         },
         {
