@@ -637,6 +637,45 @@
             }
         },
         {
+            "name": "CSS: class names",
+            "scope": [
+                "source.css entity.other.attribute-name.class.css",
+                "source.css punctuation.definition.entity.css"
+            ],
+            "settings": {
+                "foreground": "#000000"
+            }
+        },
+        {
+            "name": "CSS: functions",
+            "scope": "source.css support.function.misc.css",
+            "settings": {
+                "foreground": "#7A3E9D"
+            }
+        },
+        {
+            "name": "CSS: pseudo selector",
+            "scope": [
+                "source.scss entity.other.attribute-name.pseudo-class",
+                "source.css entity.other.attribute-name.pseudo-class"
+            ],
+            "settings": {
+                "foreground": "#AB6526",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "CSS: brackets",
+            "scope": [
+                "source.css punctuation.definition.entity.begin.bracket.square.css",
+                "source.css punctuation.definition.entity.end.bracket.square.css"
+            ],
+            "settings": {
+                "foreground": "#000000",
+                "fontStyle": "bold"
+            }
+        },
+        {
             "name": "Markup: Changed",
             "scope": "markup.changed",
             "settings": {
