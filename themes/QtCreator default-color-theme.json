@@ -467,7 +467,8 @@
                 "punctuation.definition.string.begin",
                 "punctuation.definition.string.end",
                 "punctuation.definition.string.template.begin.js",
-                "punctuation.definition.string.template.end.js"
+                "punctuation.definition.string.template.end.js",
+                "meta.preprocessor.include.cpp"
             ],
             "settings": {
                 "foreground": "#008000"
@@ -917,6 +918,65 @@
             ],
             "settings": {
                 "foreground": "#000000"
+            }
+        },
+        {
+            "name": "Shell: builtin",
+            "scope": [
+                "source.shell support.function.builtin.shell",
+                "source.shell storage.modifier.shell"
+            ],
+            "settings": {
+                "foreground": "#8d268f",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Shell: glob operator",
+            "scope": "source.shell keyword.operator.glob.shell",
+            "settings": {
+                "foreground": "#008000"
+            }
+        },
+        {
+            "name": "Shell: redirect",
+            "scope": "source.shell keyword.operator.redirect.shell",
+            "settings": {
+                "foreground": "#5484cb",
+                "fontStyle": "italic"
+            }
+        },
+        // {
+        //     "name": "Shell: command (no builtin)",
+        //     "scope": "source.shell entity.name.command.shell",
+        //     "settings": {
+        //         "foreground": "#0095ff",
+        //         "fontStyle": "bold"
+        //     }
+        // },
+        {
+            "name": "Shell: arguments",
+            "scope": "source.shell string.unquoted.argument.shell",
+            "settings": {
+                "foreground": "#000000"
+            }
+        },
+        {
+            "name": "Shell: variable",
+            "scope": "source.shell variable.other.normal.shell",
+            "settings": {
+                "foreground": "#0095ff"
+            }
+        },
+        {
+            "name": "Shell: expressions and control flow",
+            "scope": [
+                "source.shell punctuation.definition.logical-expression.shell",
+                "source.shell keyword.control.shell"
+            ],
+            "settings": {
+                "foreground": "#000000",
+                "fontStyle": "bold"
             }
         }
     ],
