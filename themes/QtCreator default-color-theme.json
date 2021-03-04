@@ -1,6 +1,7 @@
 {
     "name": "QtCreator classic default",
     "type": "light",
+    "semanticHighlighting": false,
     "colors": {
         "focusBorder": "#00000000",
         "foreground": "#000000",
@@ -355,7 +356,8 @@
         {
             "name": "Namespaces",
             "scope": [
-                "entity.name.scope-resolution"
+                "entity.name.scope-resolution",
+                "entity.name.namespace.cpp"
             ],
             "settings": {
                 "foreground": "#8d268f"
