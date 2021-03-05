@@ -1026,6 +1026,9 @@
             "templateType": {
                 "foreground": "#ff0000",
                 "fontStyle": "italic bold underline"
+            },
+            "namespace": {
+                "foreground": "#8d268f"
             }
         }
     }
