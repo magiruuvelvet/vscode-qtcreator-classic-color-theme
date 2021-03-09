@@ -1045,6 +1045,30 @@
                 "foreground": "#000000",
                 "fontStyle": "bold"
             }
+        },
+        {
+            "name": "HTTP: Header",
+            "scope": "source.http http.headers entity.name.tag.http",
+            "settings": {
+                "foreground": "#8d268f",
+                "fontStyle": "normal"
+            }
+        },
+        {
+            "name": "HTTP: Request Method",
+            "scope": "source.http http.requestline keyword.control.http",
+            "settings": {
+                "foreground": "#808000",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "HTTP: Header Value",
+            "scope": "source.http http.headers string.other.http",
+            "settings": {
+                "foreground": "#000000",
+                "fontStyle": "normal"
+            }
         }
     ],
     "editor.semanticTokenColorCustomizations": {
