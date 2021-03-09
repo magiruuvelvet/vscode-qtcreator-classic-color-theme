@@ -888,8 +888,34 @@
             }
         },
         {
-            "name": "D: debug keyword",
-            "scope": "keyword.other.debug.plain.d",
+            "name": "D: debug keyword and assertions",
+            "scope": [
+                "keyword.other.debug.plain.d",
+                "keyword.other.assert.begin.d",
+                "keyword.other.assert.end.d"
+            ],
+            "settings": {
+                "foreground": "#ce3102",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "D: traits",
+            "scope": [
+                "keyword.other.traits.begin.d",
+                "keyword.other.traits.end.d"
+            ],
+            "settings": {
+                "foreground": "#777777"
+            }
+        },
+        {
+            "name": "D: compile-time version() check",
+            "scope": [
+                "keyword.other.version.identifier.begin.d",
+                "keyword.other.version.identifier.end.d",
+                "keyword.other.version.identifer.end.d" // typo in textmate grammer?
+            ],
             "settings": {
                 "foreground": "#ce3102",
                 "fontStyle": "bold"
@@ -1023,10 +1049,6 @@
     ],
     "editor.semanticTokenColorCustomizations": {
         "rules": {
-            "templateType": {
-                "foreground": "#ff0000",
-                "fontStyle": "italic bold underline"
-            },
             "namespace": {
                 "foreground": "#8d268f"
             }
