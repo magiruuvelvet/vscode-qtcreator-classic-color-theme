@@ -902,7 +902,9 @@
             "scope": [
                 "keyword.other.debug.plain.d",
                 "keyword.other.assert.begin.d",
-                "keyword.other.assert.end.d"
+                "keyword.other.assert.end.d",
+                "keyword.other.static-assert.begin.d",
+                "keyword.other.static-assert.end.d"
             ],
             "settings": {
                 "foreground": "#ce3102",
@@ -920,7 +922,7 @@
             }
         },
         {
-            "name": "D: compile-time version() check",
+            "name": "D: compile-time version() checks",
             "scope": [
                 "keyword.other.version.identifier.begin.d",
                 "keyword.other.version.identifier.end.d",
@@ -929,6 +931,26 @@
             "settings": {
                 "foreground": "#ce3102",
                 "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "D: pragmas and scopes",
+            "scope": [
+                "keyword.other.pragma.d",
+                "keyword.control.scope.d"
+            ],
+            "settings": {
+                "foreground": "#ce3102"
+            }
+        },
+        {
+            "name": "D: is()",
+            "scope": [
+                "keyword.control.is.begin.d",
+                "keyword.control.is.end.d"
+            ],
+            "settings": {
+                "foreground": "#ce3102"
             }
         },
         {

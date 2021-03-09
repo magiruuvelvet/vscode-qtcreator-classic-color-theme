@@ -68,10 +68,35 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "filterLanguageRegex": "d",
             "decorations": [ { "fontStyle": "italic", "fontWeight": "bold", "color": "#0057ae" } ]
         },
-        // D: make identifier within version() bold
+        // D: make [unknown/custom] identifier within version() bold
         "(version)([\\s]?\\()(.*?)(\\))": {
             "filterLanguageRegex": "d",
             "decorations": [ {}, {}, { "fontWeight": "bold" }, {} ]
+        },
+        // D: version(none|all)
+        "(version)([\\s]?\\()(none|all)(\\))": {
+            "filterLanguageRegex": "d",
+            "decorations": [ {}, {}, { "fontWeight": "bold", "color": "#777777" }, {} ]
+        },
+        // D: version(endianness|architecture) - architecture list incomplete
+        "(version)([\\s]?\\()(LittleEndian|BigEndian|ARM|AArch64|X86|X86\\_64|WebAssembly|WASI)(\\))": {
+            "filterLanguageRegex": "d",
+            "decorations": [ {}, {}, { "fontWeight": "bold", "color": "#075668" }, {} ]
+        },
+        // D: version(compiler vendor)
+        "(version)([\\s]?\\()(DigitalMars|LDC|GNU|SDC|D\\_NET)(\\))": {
+            "filterLanguageRegex": "d",
+            "decorations": [ {}, {}, { "fontWeight": "bold", "color": "#ab7826" }, {} ]
+        },
+        // D: version(C and C++ runtime)
+        "(version)([\\s]?\\()(CRuntime\\_Musl|CRuntime\\_Bionic|CRuntime\\_UClibc|CRuntime\\_DigitalMars|CRuntime\\_Microsoft|CRuntime\\_Glibc|CRuntime\\_Newlib|CRuntime\\_WASI|CppRuntime\\_Clang|CppRuntime\\_Gcc|CppRuntime\\_Microsoft|CppRuntime\\_DigitalMars|CppRuntime\\_Sun)(\\))": {
+            "filterLanguageRegex": "d",
+            "decorations": [ {}, {}, { "fontWeight": "bold", "color": "#739e7b" }, {} ]
+        },
+        // D: version(platform)
+        "(version)([\\s]?\\()(linux|OSX|iOS|TVOS|WatchOS|Darwin|FreeBSD|NetBSD|OpenBSD|DragonFlyBSD|BSD|Solaris|Windows|Win32|Win64|Posix|AIX|Haiku|SkyOS|SysV3|SysV4|Hurd|Android|Emscripten|PlayStation|PlayStation4|Cygwin|MinGW|FreeStanding)(\\))": {
+            "filterLanguageRegex": "d",
+            "decorations": [ {}, {}, { "fontWeight": "bold", "color": "#c72169" }, {} ]
         },
         // D: make else before version() same color as version()
         "(else)\\s(version)[\\s]?\\(": {
