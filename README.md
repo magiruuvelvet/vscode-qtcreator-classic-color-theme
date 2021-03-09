@@ -68,6 +68,16 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "filterLanguageRegex": "d",
             "decorations": [ { "fontStyle": "italic", "fontWeight": "bold", "color": "#0057ae" } ]
         },
+        // D: make identifier within version() bold
+        "(version)([\\s]?\\()(.*?)(\\))": {
+            "filterLanguageRegex": "d",
+            "decorations": [ {}, {}, { "fontWeight": "bold" }, {} ]
+        },
+        // D: make else before version() same color as version()
+        "(else)\\s(version)[\\s]?\\(": {
+            "filterLanguageRegex": "d",
+            "decorations": [ { "color": "#ce3102" }, {} ]
+        },
         // Ruby: highlight "self.", syntax highlighting doesn't match it as separate token
         "(self)\\.": {
             "filterLanguageRegex": "ruby",

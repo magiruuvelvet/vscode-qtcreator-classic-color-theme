@@ -847,7 +847,10 @@
         },
         {
             "name": "JavaScript: console",
-            "scope": "support.class.console.js",
+            "scope": [
+                "support.class.console.js",
+                "support.class.console.ts"
+            ],
             "settings": {
                 "foreground": "#ce3102",
                 "fontStyle": "bold"
@@ -855,7 +858,10 @@
         },
         {
             "name": "JavaScript: console",
-            "scope": "support.function.console.js",
+            "scope": [
+                "support.function.console.js",
+                "support.function.console.ts"
+            ],
             "settings": {
                 "foreground": "#ce3102"
             }
@@ -863,7 +869,8 @@
         {
             "name": "JavaScript: debugger and other",
             "scope": [
-                "keyword.other.debugger.js"
+                "keyword.other.debugger.js",
+                "keyword.other.debugger.ts"
             ],
             "settings": {
                 "foreground": "#ce3102",
