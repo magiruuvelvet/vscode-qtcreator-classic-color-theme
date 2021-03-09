@@ -153,6 +153,7 @@
                 "variable.language.this.js",
                 "variable.language.self.ruby",
                 "keyword.operator.new",
+                "keyword.operator.sizeof",
                 "keyword.operator.expression.of.js",
                 "keyword.operator.expression.in.js"
             ],
@@ -228,6 +229,7 @@
             "name": "Types: support types, aliased types, language constants, etc.",
             "scope": [
                 "support.type",
+                "support.type.built-in.posix-reserved",
                 "constant.language.symbol.hashkey.ruby",
                 "variable.other.constant.ruby",
                 "entity.name.type.ts",
@@ -386,7 +388,8 @@
             "name": "Classes: constructor (D)",
             "scope": "entity.name.function.constructor.d",
             "settings": {
-                "foreground": "#808000"
+                "foreground": "#0057ae",
+                "fontStyle": "bold"
             }
         },
         {
@@ -914,7 +917,7 @@
             "scope": [
                 "keyword.other.version.identifier.begin.d",
                 "keyword.other.version.identifier.end.d",
-                "keyword.other.version.identifer.end.d" // typo in textmate grammer?
+                "keyword.other.version.identifer.end.d" // typo in textmate grammar?
             ],
             "settings": {
                 "foreground": "#ce3102",
@@ -983,6 +986,13 @@
                 "storage.modifier.reference.cpp",
                 "storage.modifier.pointer.cpp"
             ],
+            "settings": {
+                "foreground": "#000000"
+            }
+        },
+        {
+            "name": "C++: template parameter",
+            "scope": "entity.name.type.template.cpp",
             "settings": {
                 "foreground": "#000000"
             }

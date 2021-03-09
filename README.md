@@ -53,3 +53,40 @@ based on those scopes and nothing else.
    into a rainbow. All chosen colors are readable on white background in a well-lit room.
 
 Total amount of highlighting colors (without the language-specific additions): **7**
+
+## Extra Highlighting Rules
+
+This is optional. Adds some extra highlighting rules.
+
+Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
+
+```jsonc
+{
+    "highlight.regexes": {
+        // D: make D class destructor italic, syntax highlighting doesn't match it as destructor
+        "(\\~this)\\(\\)": {
+            "filterLanguageRegex": "d",
+            "decorations": [ { "fontStyle": "italic", "fontWeight": "bold", "color": "#0057ae" } ]
+        },
+        // Ruby: highlight "self.", syntax highlighting doesn't match it as separate token
+        "(self)\\.": {
+            "filterLanguageRegex": "ruby",
+            "decorations": [ { "color": "#808000" } ]
+        },
+        // Ruby: rubocop special comments
+        "(\\#\\s)(rubocop\\:enable)(.*)": {
+            "filterLanguageRegex": "ruby",
+            "decorations": [ {}, { "fontWeight": "bold", "color": "#ce3102" }, { "color": "#8d268f" } ]
+        },
+        "(\\#\\s)(rubocop\\:disable)(.*)": {
+            "filterLanguageRegex": "ruby",
+            "decorations": [ {}, { "fontWeight": "bold", "color": "#ce3102" }, { "color": "#8d268f" } ]
+        },
+        // HTTP: highlight placeholders, syntax highlighting doesn't implement a token for this
+        "(\\{\\{.*?\\}\\})": {
+            "filterLanguageRegex": "http",
+            "decorations": [ { "color": "#777777" } ]
+        }
+    }
+}
+```
