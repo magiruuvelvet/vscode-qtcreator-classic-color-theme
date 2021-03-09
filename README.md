@@ -86,6 +86,11 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         "(\\{\\{.*?\\}\\})": {
             "filterLanguageRegex": "http",
             "decorations": [ { "color": "#777777" } ]
+        },
+        // C/C++: __attribute__(())
+        "(\\_\\_attribute\\_\\_)[\\s]?\\(\\(": {
+            "filterLanguageRegex": "^c$|^cpp$",
+            "decorations": [ { "color": "#ce3102" } ]
         }
     }
 }
