@@ -155,7 +155,8 @@
                 "keyword.operator.new",
                 "keyword.operator.sizeof",
                 "keyword.operator.expression.of.js",
-                "keyword.operator.expression.in.js"
+                "keyword.operator.expression.in.js",
+                "keyword.operator.typeid.cpp"
             ],
             "settings": {
                 "foreground": "#808000"
