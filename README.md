@@ -62,6 +62,7 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
 
 ```jsonc
 {
+    "highlight.regexFlags": "g",
     "highlight.regexes": {
         // D: make D class destructor italic, syntax highlighting doesn't match it as destructor
         "(\\~this)\\(\\)": {
