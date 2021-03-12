@@ -680,6 +680,30 @@
             }
         },
         {
+            "name": "CSS/SCSS: @at rules (@media, @import, @charset)",
+            "scope": [
+                "keyword.control.at-rule.media.scss",
+                "keyword.control.at-rule.media.css",
+                "keyword.control.at-rule.import.scss",
+                "keyword.control.at-rule.charset.scss",
+                "keyword.control.at-rule.charset.css",
+                "keyword.control.at-rule.css"
+            ],
+            "settings": {
+                "foreground": "#000000",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "SCSS: operators",
+            "scope": [
+                "keyword.operator.logical.scss"
+            ],
+            "settings": {
+                "foreground": "#808000"
+            }
+        },
+        {
             "name": "Markup: Changed",
             "scope": "markup.changed",
             "settings": {
