@@ -104,6 +104,11 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "filterLanguageRegex": "d",
             "decorations": [ { "color": "#ce3102" }, {} ]
         },
+        // D: __gshared global variable across all threads
+        "(\\_\\_gshared)": {
+            "filterLanguageRegex": "d",
+            "decorations": [ { "color": "#808000", "fontWeight": "bold" } ]
+        },
         // Ruby: highlight "self.", syntax highlighting doesn't match it as separate token
         "(self)\\.": {
             "filterLanguageRegex": "ruby",
@@ -127,6 +132,16 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         "(\\_\\_attribute\\_\\_)[\\s]?\\(\\(": {
             "filterLanguageRegex": "^c$|^cpp$",
             "decorations": [ { "color": "#ce3102" } ]
+        },
+        // C++: thread_local storage
+        "(thread\\_local)": {
+            "filterLanguageRegex": "cpp",
+            "decorations": [ { "color": "#808000", "fontWeight": "bold" } ]
+        },
+        // YAML: placeholder in strings
+        "(\\%\\{.*?\\})": {
+            "filterLanguageRegex": "yaml",
+            "decorations": [ { "color": "#777777" } ]
         }
     }
 }
