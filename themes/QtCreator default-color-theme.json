@@ -979,6 +979,14 @@
             }
         },
         {
+            "name": "D: unit tests",
+            "scope": "entity.name.function.unit-test.d",
+            "settings": {
+                "foreground": "#ce3102",
+                "fontStyle": "bold"
+            }
+        },
+        {
             "name": "YAML: tag",
             "scope": "entity.name.tag.yaml",
             "settings": {
