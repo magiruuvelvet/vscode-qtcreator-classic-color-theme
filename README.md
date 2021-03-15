@@ -109,6 +109,16 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "filterLanguageRegex": "d",
             "decorations": [ { "color": "#808000", "fontWeight": "bold" } ]
         },
+        // D: operator overloads
+        "(opUnary|opIndexUnary|opCast|opBinary|opBinaryRight|opEquals|opCmp|opCall|opAssign|opIndexAssign|opSlice|opSliceAssign|opOpAssign|opIndexOpAssign|opDollar|opIndex|opDispatch)": {
+            "filterLanguageRegex": "d",
+            "decorations": [ { "color": "#808000" } ]
+        },
+        // D: cast() highlighting fix, don't colorize parenthesis
+        "(cast)(\\()(.*?)(\\))": {
+            "filterLanguageRegex": "d",
+            "decorations": [ {}, { "color": "#000000" }, {}, { "color": "#000000" } ]
+        },
         // Ruby: highlight "self.", syntax highlighting doesn't match it as separate token
         "(self)\\.": {
             "filterLanguageRegex": "ruby",

@@ -123,12 +123,20 @@
         {
             "name": "Operators: cast (static_cast and probably other)",
             "scope": [
-                "keyword.operator.cast",
+                "keyword.operator.cast"
+            ],
+            "settings": {
+                "foreground": "#808000"
+            }
+        },
+        {
+            "name": "Operators: cast (D)",
+            "scope": [
                 "support.type.cast.begin.d",
                 "support.type.cast.end.d"
             ],
             "settings": {
-                "foreground": "#808000"
+                "foreground": "#0057ae"
             }
         },
         {
