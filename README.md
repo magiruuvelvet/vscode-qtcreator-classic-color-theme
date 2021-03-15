@@ -123,6 +123,12 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "filterLanguageRegex": "ruby",
             "decorations": [ {}, { "fontWeight": "bold", "color": "#ce3102" }, { "color": "#8d268f" } ]
         },
+        // Ruby: class constructor
+        "(def\\s)(initialize)([\\(]|$)": {
+            "filterLanguageRegex": "ruby",
+            "regexFlags": "gm",
+            "decorations": [ {}, { "color": "#0057ae" }, {} ]
+        },
         // HTTP: highlight placeholders, syntax highlighting doesn't implement a token for this
         "(\\{\\{.*?\\}\\})": {
             "filterLanguageRegex": "http",
