@@ -115,12 +115,12 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ { "color": "#808000" } ]
         },
         // D: cast() highlighting fix, don't colorize parenthesis
-        "(cast)(\\()(.*?)(\\))": {
+        "(cast)([\\s]?\\()(.*?)(\\))": {
             "filterLanguageRegex": "d",
             "decorations": [ {}, { "color": "#000000" }, {}, { "color": "#000000" } ]
         },
         // D: scope() don't colorize parenthesis, highlight built-in scopes for visibility
-        "(scope)(\\()(exit|success|failure)(\\))": {
+        "(scope)([\\s]?\\()(exit|success|failure)(\\))": {
             "filterLanguageRegex": "d",
             "decorations": [ {}, { "color": "#000000" }, { "color": "#000000", "fontWeight": "bold" }, { "color": "#000000" } ]
         },
