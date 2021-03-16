@@ -110,7 +110,7 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ { "color": "#808000", "fontWeight": "bold" } ]
         },
         // D: operator overloads
-        "(opUnary|opIndexUnary|opCast|opBinary|opBinaryRight|opEquals|opCmp|opCall|opAssign|opIndexAssign|opSlice|opSliceAssign|opOpAssign|opIndexOpAssign|opDollar|opIndex|opDispatch)": {
+        "(opUnary|opIndexUnary|opCast|opBinaryRight|opBinary|opEquals|opCmp|opCall|opAssign|opIndexAssign|opSlice|opSliceAssign|opOpAssign|opIndexOpAssign|opDollar|opIndex|opDispatch)": {
             "filterLanguageRegex": "d",
             "decorations": [ { "color": "#808000" } ]
         },
