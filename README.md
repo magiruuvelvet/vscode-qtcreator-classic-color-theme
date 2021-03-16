@@ -124,6 +124,16 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "filterLanguageRegex": "d",
             "decorations": [ {}, { "color": "#000000" }, { "color": "#000000", "fontWeight": "bold" }, { "color": "#000000" } ]
         },
+        // D: scoped!
+        "(scoped\\!)": {
+            "filterLanguageRegex": "d",
+            "decorations": [ { "color": "#777777" } ]
+        },
+        // D: missing keywords in highlighter
+        "(foreach\\_reverse)": {
+            "filterLanguageRegex": "d",
+            "decorations": [ { "color": "#808000" } ]
+        },
         // Ruby: highlight "self.", syntax highlighting doesn't match it as separate token
         "(self)\\.": {
             "filterLanguageRegex": "ruby",

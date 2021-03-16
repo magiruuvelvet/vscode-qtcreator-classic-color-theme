@@ -380,7 +380,8 @@
                 "support.class",
                 "entity.name.class",
                 "entity.name.module",
-                "entity.name.type.struct.cpp"
+                "entity.name.type.struct.cpp",
+                "entity.name.type.struct.d"
             ],
             "settings": {
                 "foreground": "#8d268f"
