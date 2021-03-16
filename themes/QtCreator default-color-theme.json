@@ -245,6 +245,7 @@
                 "entity.name.type.js",
                 "entity.name.type.cpp",
                 "entity.name.type.enum.cpp",
+                "entity.name.type.enum.d",
                 "variable.other.enummember.cpp"
             ],
             "settings": {
