@@ -64,6 +64,11 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
 {
     "highlight.regexFlags": "g",
     "highlight.regexes": {
+        // highlight trailing whitespaces, alternative to possan.nbsp-vscode which is not configurable at all
+        "([ \\t]+$)": {
+            "regexFlags": "gm",
+            "decorations": [ {  "backgroundColor": "#b4000070" } ]
+        },
         // D: make D class destructor italic, syntax highlighting doesn't match it as destructor
         "(\\~this)\\(\\)": {
             "filterLanguageRegex": "d",
@@ -136,6 +141,10 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         },
         // D: special object functions available almost everywhere
         "(\\.)(idup|dup|length|ptr|stringof|alignof|mangleof|init|sizeof|tupleof)([\\s\\)\\]\\},;]|$)": {
+            "filterLanguageRegex": "d",
+            "decorations": [ {}, { "color": "#0057ae" }, {} ]
+        },
+        "(\\.)(classinfo)([\\s\\)\\]\\},;\\.]|$)": {
             "filterLanguageRegex": "d",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
         },
