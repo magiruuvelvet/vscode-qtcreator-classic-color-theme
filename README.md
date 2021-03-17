@@ -187,6 +187,11 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         "(\\%\\{.*?\\})": {
             "filterLanguageRegex": "yaml",
             "decorations": [ { "color": "#777777" } ]
+        },
+        // C/C++/D: __PRETTY_FUNCTION__, __FILE__, __LINE__
+        "(\\_\\_PRETTY\\_FUNCTION\\_\\_|\\_\\_FILE\\_\\_|\\_\\_LINE\\_\\_)": {
+            "filterLanguageRegex": "^c$|^cpp$|^d$",
+            "decorations": [ { "color": "#20208c", "fontWeight": "bold" } ]
         }
     }
 }
