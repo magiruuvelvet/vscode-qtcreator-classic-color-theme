@@ -134,6 +134,11 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "filterLanguageRegex": "d",
             "decorations": [ { "color": "#808000" } ]
         },
+        // D: special object functions available almost everywhere
+        "(\\.)(idup|dup|length|ptr|stringof|alignof|mangleof|init|sizeof|tupleof)([\\s\\)\\]\\},;]|$)": {
+            "filterLanguageRegex": "d",
+            "decorations": [ {}, { "color": "#0057ae" }, {} ]
+        },
         // Ruby: highlight "self.", syntax highlighting doesn't match it as separate token
         "(self)\\.": {
             "filterLanguageRegex": "ruby",
