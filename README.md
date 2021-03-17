@@ -197,6 +197,12 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         "(\\bauto\\b)[\\s]": {
             "filterLanguageRegex": "cpp",
             "decorations": [ { "color": "#808000" } ]
+        },
+        // D: highlight some common classes and aliases as types (purple)
+        // \\bObject\\b|\\bTypeInfo\\b|\\bModuleInfo\\b
+        "(\\bsize_t\\b|\\bptrdiff_t\\b)": {
+            "filterLanguageRegex": "d",
+            "decorations": [ { "color": "#8d268f" } ]
         }
     }
 }

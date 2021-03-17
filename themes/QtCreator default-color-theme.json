@@ -178,7 +178,8 @@
                 "keyword.operator.sizeof",
                 "keyword.operator.expression.of.js",
                 "keyword.operator.expression.in.js",
-                "keyword.operator.typeid.cpp"
+                "keyword.operator.typeid.cpp",
+                "#keyword.control.in.d" // typo in textmate grammar
             ],
             "settings": {
                 "foreground": "#808000"
