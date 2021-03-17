@@ -153,6 +153,20 @@
             }
         },
         {
+            "name": "__LINE__, __FILE__, etc.",
+            "scope": [
+                "constant.language.special-keyword.d",
+                "entity.name.other.preprocessor.macro.predefined.probably.PRETTY_FUNCTION.cpp",
+                "entity.name.other.preprocessor.macro.predefined.__FUNCTION__.cpp",
+                "entity.name.other.preprocessor.macro.predefined.__FILE__.cpp",
+                "entity.name.other.preprocessor.macro.predefined.__LINE__.cpp"
+            ],
+            "settings": {
+                "foreground": "#20208c",
+                "fontStyle": "bold"
+            }
+        },
+        {
             "name": "Keywords",
             "scope": [
                 "keyword",

@@ -110,32 +110,32 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ { "color": "#ce3102" }, {} ]
         },
         // D: __gshared global variable across all threads
-        "(\\_\\_gshared)": {
+        "(\\b\\_\\_gshared\\b)": {
             "filterLanguageRegex": "d",
             "decorations": [ { "color": "#808000", "fontWeight": "bold" } ]
         },
         // D: operator overloads
-        "(opUnary|opIndexUnary|opCast|opBinaryRight|opBinary|opEquals|opCmp|opCall|opAssign|opIndexAssign|opSlice|opSliceAssign|opOpAssign|opIndexOpAssign|opDollar|opIndex|opDispatch)": {
+        "(\\bopUnary\\b|\\bopIndexUnary\\b|\\bopCast\\b|\\bopBinaryRight\\b|\\bopBinary\\b|\\bopEquals\\b|\\bopCmp\\b|\\bopCall\\b|\\bopAssign\\b|\\bopIndexAssign\\b|\\bopSlice\\b|\\bopSliceAssign\\b|\\bopOpAssign\\b|\\bopIndexOpAssign\\b|\\bopDollar\\b|\\bopIndex\\b|\\bopDispatch\\b)": {
             "filterLanguageRegex": "d",
             "decorations": [ { "color": "#808000" } ]
         },
         // D: cast() highlighting fix, don't colorize parenthesis
-        "(cast)([\\s]?\\()(.*?)(\\))": {
+        "(\\bcast)([\\s]?\\()(.*?)(\\))": {
             "filterLanguageRegex": "d",
             "decorations": [ {}, { "color": "#000000" }, {}, { "color": "#000000" } ]
         },
         // D: scope() don't colorize parenthesis, highlight built-in scopes for visibility
-        "(scope)([\\s]?\\()(exit|success|failure)(\\))": {
+        "(\\bscope)([\\s]?\\()(exit|success|failure)(\\))": {
             "filterLanguageRegex": "d",
             "decorations": [ {}, { "color": "#000000" }, { "color": "#000000", "fontWeight": "bold" }, { "color": "#000000" } ]
         },
         // D: scoped!
-        "(scoped\\!)": {
+        "(\\bscoped\\!)": {
             "filterLanguageRegex": "d",
             "decorations": [ { "color": "#777777" } ]
         },
         // D: missing keywords in highlighter
-        "(foreach\\_reverse)": {
+        "(\\bforeach\\_reverse\\b)": {
             "filterLanguageRegex": "d",
             "decorations": [ { "color": "#808000" } ]
         },
@@ -149,7 +149,7 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
         },
         // Ruby: highlight "self.", syntax highlighting doesn't match it as separate token
-        "(self)\\.": {
+        "(\\bself)\\.": {
             "filterLanguageRegex": "ruby",
             "decorations": [ { "color": "#808000" } ]
         },
@@ -163,7 +163,7 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ {}, { "fontWeight": "bold", "color": "#ce3102" }, { "color": "#8d268f" } ]
         },
         // Ruby: class constructor
-        "(def\\s)(initialize)([\\(]|$)": {
+        "(\\bdef\\s)(initialize)([\\s\\(]|$)": {
             "filterLanguageRegex": "ruby",
             "regexFlags": "gm",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
@@ -179,7 +179,7 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ { "color": "#ce3102" } ]
         },
         // C++: thread_local storage
-        "(thread\\_local)": {
+        "(\\bthread\\_local\\b)": {
             "filterLanguageRegex": "cpp",
             "decorations": [ { "color": "#808000", "fontWeight": "bold" } ]
         },
@@ -189,9 +189,14 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ { "color": "#777777" } ]
         },
         // C/C++/D: __PRETTY_FUNCTION__, __FILE__, __LINE__
-        "(\\_\\_PRETTY\\_FUNCTION\\_\\_|\\_\\_FILE\\_\\_|\\_\\_LINE\\_\\_)": {
+        "(\\_\\_PRETTY\\_FUNCTION\\_\\_|\\_\\_FUNCTION\\_\\_|\\_\\_FILE\\_\\_|\\_\\_LINE\\_\\_)": {
             "filterLanguageRegex": "^c$|^cpp$|^d$",
             "decorations": [ { "color": "#20208c", "fontWeight": "bold" } ]
+        },
+        // C++: semantic highlighting fix, ensure "auto" is yellow instead of purple
+        "(\\bauto\\b)[\\s]": {
+            "filterLanguageRegex": "cpp",
+            "decorations": [ { "color": "#808000" } ]
         }
     }
 }
