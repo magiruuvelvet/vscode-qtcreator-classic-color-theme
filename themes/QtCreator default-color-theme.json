@@ -1012,6 +1012,22 @@
             }
         },
         {
+            "name": "D: built-in attributes",
+            "scope": "entity.name.tag.property.d",
+            "settings": {
+                "foreground": "#222222",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "D: user-defined attributes",
+            "scope": "entity.name.tag.user-defined-property.d",
+            "settings": {
+                "foreground": "#222222",
+                "fontStyle": "bold italic"
+            }
+        },
+        {
             "name": "YAML: tag",
             "scope": "entity.name.tag.yaml",
             "settings": {

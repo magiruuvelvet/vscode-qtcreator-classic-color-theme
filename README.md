@@ -100,7 +100,7 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ {}, {}, { "fontWeight": "bold", "color": "#739e7b" }, {} ]
         },
         // D: version(platform)
-        "(version)([\\s]?\\()(linux|OSX|iOS|TVOS|WatchOS|Darwin|FreeBSD|NetBSD|OpenBSD|DragonFlyBSD|BSD|Solaris|Windows|Win32|Win64|Posix|AIX|Haiku|SkyOS|SysV3|SysV4|Hurd|Android|Emscripten|PlayStation|PlayStation4|Cygwin|MinGW|FreeStanding)(\\))": {
+        "(version)([\\s]?\\()(linux|OSX|iOS|TVOS|tvOS|WatchOS|watchOS|Darwin|FreeBSD|NetBSD|OpenBSD|DragonFlyBSD|BSD|Solaris|Windows|Win32|Win64|Posix|AIX|Haiku|SkyOS|SysV3|SysV4|Hurd|Android|Emscripten|PlayStation|PlayStation4|Cygwin|MinGW|FreeStanding)(\\))": {
             "filterLanguageRegex": "d",
             "decorations": [ {}, {}, { "fontWeight": "bold", "color": "#c72169" }, {} ]
         },
