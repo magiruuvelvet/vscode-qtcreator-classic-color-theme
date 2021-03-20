@@ -109,6 +109,16 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "filterLanguageRegex": "d",
             "decorations": [ { "color": "#ce3102" }, {} ]
         },
+        // D: pragmas
+        "(\\bpragma\\b)(\\()(.*?)[\\,\\)]": {
+            "filterLanguageRegex": "d",
+            "decorations": [ {}, {}, { "color": "#000000" } ]
+        },
+        // D: known pragmas
+        "(\\bpragma\\b)(\\()(inline|mangle)[\\,\\)]": {
+            "filterLanguageRegex": "d",
+            "decorations": [ {}, {}, { "fontWeight": "bold" } ]
+        },
         // D: __gshared global variable across all threads
         "(\\b\\_\\_gshared\\b)": {
             "filterLanguageRegex": "d",
@@ -143,6 +153,11 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         "(\\.)(idup|dup|length|ptr|funcptr|stringof|alignof|mangleof|init|sizeof|tupleof|classinfo)([\\s\\)\\]\\},;\\.]|$)": {
             "filterLanguageRegex": "d",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
+        },
+        // D: module constructor/destructor
+        "(static\\s[\\s]?this\\(\\)|static\\s[\\s]?\\~this\\(\\)|shared\\s[\\s]?static\\s[\\s]?this\\(\\)|shared\\s[\\s]?static\\s[\\s]?\\~this\\(\\))": {
+            "filterLanguageRegex": "d",
+            "decorations": [ { "color": "#ce3102", "fontWeight": "normal" } ]
         },
         // Ruby: highlight "self.", syntax highlighting doesn't match it as separate token
         "(\\bself)\\.": {
