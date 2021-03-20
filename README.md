@@ -140,11 +140,7 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ { "color": "#808000" } ]
         },
         // D: special object functions available almost everywhere
-        "(\\.)(idup|dup|length|ptr|stringof|alignof|mangleof|init|sizeof|tupleof)([\\s\\)\\]\\},;]|$)": {
-            "filterLanguageRegex": "d",
-            "decorations": [ {}, { "color": "#0057ae" }, {} ]
-        },
-        "(\\.)(classinfo)([\\s\\)\\]\\},;\\.]|$)": {
+        "(\\.)(idup|dup|length|ptr|funcptr|stringof|alignof|mangleof|init|sizeof|tupleof|classinfo)([\\s\\)\\]\\},;\\.]|$)": {
             "filterLanguageRegex": "d",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
         },
@@ -199,7 +195,6 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ { "color": "#808000" } ]
         },
         // D: highlight some common classes and aliases as types (purple)
-        // \\bObject\\b|\\bTypeInfo\\b|\\bModuleInfo\\b
         "(\\bsize_t\\b|\\bptrdiff_t\\b)": {
             "filterLanguageRegex": "d",
             "decorations": [ { "color": "#8d268f" } ]

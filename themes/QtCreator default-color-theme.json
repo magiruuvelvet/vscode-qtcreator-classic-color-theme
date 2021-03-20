@@ -157,6 +157,7 @@
             "scope": [
                 "constant.language.special-keyword.d",
                 "entity.name.other.preprocessor.macro.predefined.probably.PRETTY_FUNCTION.cpp",
+                "entity.name.other.preprocessor.macro.predefined.__PRETTY_FUNCTION__.cpp",
                 "entity.name.other.preprocessor.macro.predefined.__FUNCTION__.cpp",
                 "entity.name.other.preprocessor.macro.predefined.__FILE__.cpp",
                 "entity.name.other.preprocessor.macro.predefined.__LINE__.cpp"
