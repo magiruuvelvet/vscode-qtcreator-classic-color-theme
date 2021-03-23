@@ -71,117 +71,117 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         },
         // D: make D class destructor italic, syntax highlighting doesn't match it as destructor
         "(\\~this)\\(\\)": {
-            "filterLanguageRegex": "d",
+            "filterLanguageRegex": "^d$",
             "decorations": [ { "fontStyle": "italic", "fontWeight": "bold", "color": "#0057ae" } ]
         },
         // D: make [unknown/custom] identifier within version() bold
         "(version)([\\s]?\\()(.*?)(\\))": {
-            "filterLanguageRegex": "d",
+            "filterLanguageRegex": "^d$",
             "decorations": [ {}, {}, { "fontWeight": "bold" }, {} ]
         },
         // D: version(none|all)
         "(version)([\\s]?\\()(none|all)(\\))": {
-            "filterLanguageRegex": "d",
+            "filterLanguageRegex": "^d$",
             "decorations": [ {}, {}, { "fontWeight": "bold", "color": "#777777" }, {} ]
         },
         // D: version(endianness|architecture) - architecture list incomplete
         "(version)([\\s]?\\()(LittleEndian|BigEndian|ARM|AArch64|X86|X86\\_64|WebAssembly|WASI)(\\))": {
-            "filterLanguageRegex": "d",
+            "filterLanguageRegex": "^d$",
             "decorations": [ {}, {}, { "fontWeight": "bold", "color": "#075668" }, {} ]
         },
         // D: version(compiler vendor)
         "(version)([\\s]?\\()(DigitalMars|LDC|GNU|SDC|D\\_NET)(\\))": {
-            "filterLanguageRegex": "d",
+            "filterLanguageRegex": "^d$",
             "decorations": [ {}, {}, { "fontWeight": "bold", "color": "#ab7826" }, {} ]
         },
         // D: version(C and C++ runtime)
         "(version)([\\s]?\\()(CRuntime\\_Musl|CRuntime\\_Bionic|CRuntime\\_UClibc|CRuntime\\_DigitalMars|CRuntime\\_Microsoft|CRuntime\\_Glibc|CRuntime\\_Newlib|CRuntime\\_WASI|CppRuntime\\_Clang|CppRuntime\\_Gcc|CppRuntime\\_Microsoft|CppRuntime\\_DigitalMars|CppRuntime\\_Sun)(\\))": {
-            "filterLanguageRegex": "d",
+            "filterLanguageRegex": "^d$",
             "decorations": [ {}, {}, { "fontWeight": "bold", "color": "#739e7b" }, {} ]
         },
         // D: version(platform)
         "(version)([\\s]?\\()(linux|OSX|iOS|TVOS|tvOS|WatchOS|watchOS|Darwin|FreeBSD|NetBSD|OpenBSD|DragonFlyBSD|BSD|Solaris|Windows|Win32|Win64|Posix|AIX|Haiku|SkyOS|SysV3|SysV4|Hurd|Android|Emscripten|PlayStation|PlayStation4|Cygwin|MinGW|FreeStanding)(\\))": {
-            "filterLanguageRegex": "d",
+            "filterLanguageRegex": "^d$",
             "decorations": [ {}, {}, { "fontWeight": "bold", "color": "#c72169" }, {} ]
         },
         // D: make else before version() same color as version()
         "(else)\\s(version)[\\s]?\\(": {
-            "filterLanguageRegex": "d",
+            "filterLanguageRegex": "^d$",
             "decorations": [ { "color": "#ce3102" }, {} ]
         },
         // D: pragmas
         "(\\bpragma\\b)(\\()(.*?)[\\,\\)]": {
-            "filterLanguageRegex": "d",
+            "filterLanguageRegex": "^d$",
             "decorations": [ {}, {}, { "color": "#000000" } ]
         },
         // D: known pragmas
         "(\\bpragma\\b)(\\()(inline|mangle)[\\,\\)]": {
-            "filterLanguageRegex": "d",
+            "filterLanguageRegex": "^d$",
             "decorations": [ {}, {}, { "fontWeight": "bold" } ]
         },
         // D: __gshared global variable across all threads
         "(\\b\\_\\_gshared\\b)": {
-            "filterLanguageRegex": "d",
+            "filterLanguageRegex": "^d$",
             "decorations": [ { "color": "#808000", "fontWeight": "bold" } ]
         },
         // D: operator overloads
         "(\\bopUnary\\b|\\bopIndexUnary\\b|\\bopCast\\b|\\bopBinaryRight\\b|\\bopBinary\\b|\\bopEquals\\b|\\bopCmp\\b|\\bopCall\\b|\\bopAssign\\b|\\bopIndexAssign\\b|\\bopSlice\\b|\\bopSliceAssign\\b|\\bopOpAssign\\b|\\bopIndexOpAssign\\b|\\bopDollar\\b|\\bopIndex\\b|\\bopDispatch\\b)": {
-            "filterLanguageRegex": "d",
+            "filterLanguageRegex": "^d$",
             "decorations": [ { "color": "#808000" } ]
         },
         // D: cast() highlighting fix, don't colorize parenthesis
         "(\\bcast)([\\s]?\\()(.*?)(\\))": {
-            "filterLanguageRegex": "d",
+            "filterLanguageRegex": "^d$",
             "decorations": [ {}, { "color": "#000000" }, {}, { "color": "#000000" } ]
         },
         // D: scope() don't colorize parenthesis, highlight built-in scopes for visibility
         "(\\bscope)([\\s]?\\()(exit|success|failure)(\\))": {
-            "filterLanguageRegex": "d",
+            "filterLanguageRegex": "^d$",
             "decorations": [ {}, { "color": "#000000" }, { "color": "#000000", "fontWeight": "bold" }, { "color": "#000000" } ]
         },
         // D: scoped!
         "(\\bscoped\\!)": {
-            "filterLanguageRegex": "d",
+            "filterLanguageRegex": "^d$",
             "decorations": [ { "color": "#777777" } ]
         },
         // D: missing keywords in highlighter
         "(\\bforeach\\_reverse\\b)": {
-            "filterLanguageRegex": "d",
+            "filterLanguageRegex": "^d$",
             "decorations": [ { "color": "#808000" } ]
         },
         // D: special object functions available almost everywhere
         "(\\.)(idup|dup|length|ptr|funcptr|stringof|alignof|mangleof|init|sizeof|tupleof|classinfo)([\\s\\)\\]\\},;\\.]|$)": {
-            "filterLanguageRegex": "d",
+            "filterLanguageRegex": "^d$",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
         },
         // D: module constructor/destructor
         "(static\\s[\\s]?this\\(\\)|static\\s[\\s]?\\~this\\(\\)|shared\\s[\\s]?static\\s[\\s]?this\\(\\)|shared\\s[\\s]?static\\s[\\s]?\\~this\\(\\))": {
-            "filterLanguageRegex": "d",
+            "filterLanguageRegex": "^d$",
             "decorations": [ { "color": "#ce3102", "fontWeight": "normal" } ]
         },
         // Ruby: highlight "self.", syntax highlighting doesn't match it as separate token
         "(\\bself)\\.": {
-            "filterLanguageRegex": "ruby",
+            "filterLanguageRegex": "^ruby$",
             "decorations": [ { "color": "#808000" } ]
         },
         // Ruby: rubocop special comments
         "(\\#\\s)(rubocop\\:enable)(.*)": {
-            "filterLanguageRegex": "ruby",
+            "filterLanguageRegex": "^ruby$",
             "decorations": [ {}, { "fontWeight": "bold", "color": "#ce3102" }, { "color": "#8d268f" } ]
         },
         "(\\#\\s)(rubocop\\:disable)(.*)": {
-            "filterLanguageRegex": "ruby",
+            "filterLanguageRegex": "^ruby$",
             "decorations": [ {}, { "fontWeight": "bold", "color": "#ce3102" }, { "color": "#8d268f" } ]
         },
         // Ruby: class constructor
         "(\\bdef\\s)(initialize)([\\s\\(]|$)": {
-            "filterLanguageRegex": "ruby",
+            "filterLanguageRegex": "^ruby$",
             "regexFlags": "gm",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
         },
         // HTTP: highlight placeholders, syntax highlighting doesn't implement a token for this
         "(\\{\\{.*?\\}\\})": {
-            "filterLanguageRegex": "http",
+            "filterLanguageRegex": "^http$",
             "decorations": [ { "color": "#777777" } ]
         },
         // C/C++: __attribute__(())
@@ -191,12 +191,12 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         },
         // C++: thread_local storage
         "(\\bthread\\_local\\b)": {
-            "filterLanguageRegex": "cpp",
+            "filterLanguageRegex": "^cpp$",
             "decorations": [ { "color": "#808000", "fontWeight": "bold" } ]
         },
         // YAML: placeholder in strings
         "(\\%\\{.*?\\})": {
-            "filterLanguageRegex": "yaml",
+            "filterLanguageRegex": "^yaml$",
             "decorations": [ { "color": "#777777" } ]
         },
         // C/C++/D: __PRETTY_FUNCTION__, __FILE__, __LINE__
@@ -206,13 +206,57 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         },
         // C++: semantic highlighting fix, ensure "auto" is yellow instead of purple
         "(\\bauto\\b)[\\s]": {
-            "filterLanguageRegex": "cpp",
+            "filterLanguageRegex": "^cpp$",
             "decorations": [ { "color": "#808000" } ]
         },
         // D: highlight some common classes and aliases as types (purple)
         "(\\bsize_t\\b|\\bptrdiff_t\\b)": {
-            "filterLanguageRegex": "d",
+            "filterLanguageRegex": "^d$",
             "decorations": [ { "color": "#8d268f" } ]
+        },
+        // CMake: target types, visibility and other identifiers
+        "(\\bPUBLIC\\b|\\bPRIVATE\\b|\\bSTATIC\\b|\\bSHARED\\b|\\bEXECUTABLE\\b|\\bINTERFACE\\b|\\bIMPORTED\\b|\\bGLOBAL\\b|\\bALIAS\\b|\\bTARGET\\b|\\bPROPERTY\\b|\\bPROPERTIES\\b)": {
+            "filterLanguageRegex": "^cmake$",
+            "decorations": [ { "color": "#008000", "fontWeight": "normal" } ]
+        },
+        // CMake: some keywords which should be differently colored
+        "(\\bNOT\\b|\\STREQUAL\\b|\\bEQUAL\\b|\\bCOMPARE\\b|\\bDEFINED\\b|\\bQUIET\\b|\\bREQUIRED\\b|\\bCOMMAND\\b|\\bCOMMENT\\b|\\bALL\\b|\\bDEPENDS\\b)": {
+            "filterLanguageRegex": "^cmake$",
+            "decorations": [ { "color": "#008000", "fontWeight": "normal" } ]
+        },
+        // CMake: variables
+        "(\\$\\{.*?\\})": {
+            "filterLanguageRegex": "^cmake$",
+            "decorations": [ { "color": "#808000" } ]
+        },
+        // CMake: custom macros (shared-cmake-modules)
+        "(\\bCreateTarget\\b|\\bCreateTargetFromPath\\b|\\bProjectConfigureFile\\b|\\bd\\_define\\_version\\b|\\bd\\_install\\_injectors\\b)": {
+            "filterLanguageRegex": "^cmake$",
+            "decorations": [ { "color": "#644a9b" } ]
+        },
+        // CMake: boolean (ON/OFF)
+        "(\\bON\\b|\\bY\\b|\\bTRUE\\b)": {
+            "filterLanguageRegex": "^cmake$",
+            "decorations": [ { "color": "#30a030", "fontWeight": "normal" } ]
+        },
+        "(\\bOFF\\b|\\bN\\b|\\bFALSE\\b)": {
+            "filterLanguageRegex": "^cmake$",
+            "decorations": [ { "color": "#e05050", "fontWeight": "normal" } ]
+        },
+        // CMake: cache and data types
+        "(\\bCACHE\\b|\\bFORCE\\b|\\bSTRING\\b|\\bPATH\\b|\\bBOOL\\b)": {
+            "filterLanguageRegex": "^cmake$",
+            "decorations": [ { "color": "#006e28", "fontWeight": "normal" } ]
+        },
+        // CMAKE: aliased target names
+        "(\\b[\\w\\-]+::[\\w\\-]+\\b)": {
+            "filterLanguageRegex": "^cmake$",
+            "decorations": [ { "color": "#b08000", "fontWeight": "normal" } ]
+        },
+        // Markdown: strike through
+        "(\\~\\~.*?\\~\\~)": {
+            "filterLanguageRegex": "^markdown$",
+            "decorations": [ { "textDecoration": "line-through" } ]
         }
     }
 }

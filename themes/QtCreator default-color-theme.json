@@ -536,10 +536,25 @@
             }
         },
         {
-            "name": "CMake: PUBLIC PRIVATE etc.",
+            "name": "CMake: Strings",
+            "scope": "string.source.cmake",
+            "settings": {
+                "foreground": "#bf0303"
+            }
+        },
+        {
+            "name": "CMake: entities (whatever that means)",
             "scope": "entity.source.cmake",
             "settings": {
                 "foreground": "#808000"
+            }
+        },
+        {
+            "name": "CMake: Keywords",
+            "scope": "keyword.cmake",
+            "settings":{
+                "foreground": "#000000",
+                "fontStyle": "bold"
             }
         },
         {
