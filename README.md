@@ -65,7 +65,7 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
     "highlight.regexFlags": "g",
     "highlight.regexes": {
         // highlight trailing whitespaces, alternative to possan.nbsp-vscode which is not configurable at all
-        "([ \\t]+$)": {
+        "([ \\t\\s]+$)": {
             "regexFlags": "gm",
             "decorations": [ {  "backgroundColor": "#b4000070" } ]
         },
