@@ -115,9 +115,9 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ {}, {}, { "color": "#000000" } ]
         },
         // D: known pragmas
-        "(\\bpragma\\b)(\\()(inline|mangle)[\\,\\)]": {
+        "(\\bpragma\\b)(\\()(inline|mangle|lib|linkerDirective|crt\\_constructor|crt\\_destructor|msg|printf|scanf|startaddress)([\\,\\)])": {
             "filterLanguageRegex": "^d$",
-            "decorations": [ {}, {}, { "fontWeight": "bold" } ]
+            "decorations": [ {}, {}, { "fontWeight": "bold" }, {} ]
         },
         // D: __gshared global variable across all threads
         "(\\b\\_\\_gshared\\b)": {

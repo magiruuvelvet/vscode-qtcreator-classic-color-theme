@@ -1011,6 +1011,16 @@
             }
         },
         {
+            "name": "JavaScript: dom variables",
+            "scope": [
+                "support.variable.dom.js",
+                "support.variable.dom.ts"
+            ],
+            "settings": {
+                "foreground": "#8d268f"
+            }
+        },
+        {
             "name": "D: Module constructor",
             "scope": [
                 "entity.name.class.constructor.shared-static.d"
