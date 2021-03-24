@@ -248,7 +248,7 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "filterLanguageRegex": "^cmake$",
             "decorations": [ { "color": "#006e28", "fontWeight": "normal" } ]
         },
-        // CMAKE: aliased target names
+        // CMake: aliased target names
         "(\\b[\\w\\-]+::[\\w\\-]+\\b)": {
             "filterLanguageRegex": "^cmake$",
             "decorations": [ { "color": "#b08000", "fontWeight": "normal" } ]

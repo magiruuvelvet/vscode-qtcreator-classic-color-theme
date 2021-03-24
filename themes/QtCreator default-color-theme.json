@@ -1228,18 +1228,17 @@
             "name": "Shell: redirect",
             "scope": "source.shell keyword.operator.redirect.shell",
             "settings": {
-                "foreground": "#5484cb",
+                "foreground": "#5484cb80",
                 "fontStyle": "italic"
             }
         },
-        // {
-        //     "name": "Shell: command (no builtin)",
-        //     "scope": "source.shell entity.name.command.shell",
-        //     "settings": {
-        //         "foreground": "#0095ff",
-        //         "fontStyle": "bold"
-        //     }
-        // },
+        {
+            "name": "Shell: command (no builtin)",
+            "scope": "source.shell entity.name.command.shell",
+            "settings": {
+                "foreground": "#8d268f"
+            }
+        },
         {
             "name": "Shell: arguments",
             "scope": "source.shell string.unquoted.argument.shell",
@@ -1249,9 +1248,14 @@
         },
         {
             "name": "Shell: variable",
-            "scope": "source.shell variable.other.normal.shell",
+            "scope": [
+                "source.shell variable.other.normal.shell",
+                "source.shell variable.other.assignment.shell",
+                "source.shell variable.parameter.positional.shell",
+                "source.shell variable.parameter.positional.all.shell"
+            ],
             "settings": {
-                "foreground": "#0095ff"
+                "foreground": "#0057ae"
             }
         },
         {
@@ -1263,6 +1267,31 @@
             "settings": {
                 "foreground": "#000000",
                 "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Shell: function",
+            "scope": "source.shell entity.name.function.shell",
+            "settings": {
+                "foreground": "#644a9b"
+            }
+        },
+        {
+            "name": "Shell: logical operator",
+            "scope": "source.shell keyword.operator.logical.shell",
+            "settings": {
+                "foreground": "#006e28"
+            }
+        },
+        {
+            "name": "Shell: Strings",
+            "scope": [
+                "source.shell string.quoted.double.shell",
+                "source.shell punctuation.definition.string.begin.shell",
+                "source.shell punctuation.definition.string.end.shell"
+            ],
+            "settings": {
+                "foreground": "#bf0303"
             }
         },
         {
