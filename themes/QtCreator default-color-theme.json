@@ -89,7 +89,8 @@
             "name": "Comments: Documentation",
             "scope": [
                 "comment.documentation",
-                "comment.block.documentation"
+                "comment.block.documentation",
+                "comment.block.documentation punctuation.definition.comment" // also highlight begin and end markers
             ],
             "settings": {
                 "foreground": "#000080"
@@ -968,10 +969,11 @@
             }
         },
         {
-            "name": "Ruby: HEREDOC",
+            "name": "General: HEREDOC blocks",
             "scope": [
                 "string.unquoted.heredoc.ruby punctuation.definition.string.begin.ruby",
-                "string.unquoted.heredoc.ruby punctuation.definition.string.end.ruby"
+                "string.unquoted.heredoc.ruby punctuation.definition.string.end.ruby",
+                "source.shell keyword.control.heredoc-token.shell"
             ],
             "settings": {
                 "foreground": "#c82479",
@@ -1316,6 +1318,13 @@
             "settings": {
                 "foreground": "#000000",
                 "fontStyle": "normal"
+            }
+        },
+        {
+            "name": "systemd: key",
+            "scope": "source.systemdUnitFile entity.name.tag",
+            "settings": {
+                "foreground": "#0057ae"
             }
         }
     ],

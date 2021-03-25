@@ -110,9 +110,9 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ { "color": "#ce3102" }, {} ]
         },
         // D: pragmas
-        "(\\bpragma\\b)(\\()(.*?)[\\,\\)]": {
+        "(\\bpragma\\b)(\\()(.*?)([\\,\\)])": {
             "filterLanguageRegex": "^d$",
-            "decorations": [ {}, {}, { "color": "#000000" } ]
+            "decorations": [ {}, {}, { "color": "#000000" }, {} ]
         },
         // D: known pragmas
         "(\\bpragma\\b)(\\()(inline|mangle|lib|linkerDirective|crt\\_constructor|crt\\_destructor|msg|printf|scanf|startaddress)([\\,\\)])": {
@@ -257,6 +257,25 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         "(\\~\\~.*?\\~\\~)": {
             "filterLanguageRegex": "^markdown$",
             "decorations": [ { "textDecoration": "line-through" } ]
+        },
+        // ShellScript: /dev/null highlighting fix
+        "(\\/dev\\/null)": {
+            "filterLanguageRegex": "^shellscript$",
+            "decorations": [ { "color": "#5484cb80", "fontStyle": "italic" } ]
+        },
+        // SQL: highlighting rules for MariaDB/MySQL dialect
+        "(#.*)": {
+            "filterLanguageRegex": "^sql$",
+            "decorations": [ { "color": "#737373" } ] // comments
+        },
+        "(\\b0x[0-9A-Fa-f]+\\b)": {
+            "filterLanguageRegex": "^sql$",
+            "decorations": [ { "color": "#000080" } ] // hexadecimal numbers
+        },
+        // systemd: highlight services and targets
+        "(\\b[\\w\\-]+\\.)(service|target)\\b": {
+            "filterLanguageRegex": "^systemd\\-unit\\-file$",
+            "decorations": [ { "color": "#006e28" }, { "color": "#006e28", "fontStyle": "italic" } ]
         }
     }
 }
