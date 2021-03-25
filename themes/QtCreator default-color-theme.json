@@ -392,7 +392,8 @@
         {
             "name": "Functions: function member",
             "scope": [
-                "entity.name.function.member"
+                "entity.name.function.member",
+                "entity.name.function.member.cpp"
             ],
             "settings": {
                 "foreground": "#000000"
@@ -423,7 +424,10 @@
         },
         {
             "name": "Classes: constructor",
-            "scope": "entity.name.function.constructor",
+            "scope": [
+                "entity.name.function.constructor",
+                "entity.name.function.definition.special.constructor.cpp"
+            ],
             "settings": {
                 "foreground": "#000000"
             }
@@ -438,7 +442,10 @@
         },
         {
             "name": "Classes: destructor",
-            "scope": "entity.name.function.destructor",
+            "scope": [
+                "entity.name.function.destructor",
+                "entity.name.function.definition.special.member.destructor.cpp"
+            ],
             "settings": {
                 "foreground": "#000000",
                 "fontStyle": "italic"
@@ -1332,7 +1339,30 @@
         "rules": {
             "namespace": {
                 "foreground": "#8d268f"
-            }
+            },
+            "enum": {
+                "foreground": "#8d268f"
+            },
+            "enumConstant": {
+                "foreground": "#8d268f"
+            },
+            // "member": {
+            //     "foreground": "#8d1b1b"
+            // }
         }
+    },
+    "semanticTokenColors": {
+        "namespace": {
+            "foreground": "#8d268f"
+        },
+        "enum": {
+            "foreground": "#8d268f"
+        },
+        "enumConstant": {
+            "foreground": "#8d268f"
+        },
+        // "member": {
+        //     "foreground": "#8d1b1b"
+        // }
     }
 }
