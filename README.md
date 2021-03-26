@@ -63,6 +63,12 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
 ```jsonc
 {
     "highlight.regexFlags": "g",
+    "highlight.decorations": {
+        // prevent follow up text from being highlighted incorrectly on typing, when the regex doesn't match anymore
+        // bug: https://github.com/fabiospampinato/vscode-highlight/issues/31
+        // workaround may cause performance issues, if VSCode becomes unresponsive, switch back to the default "3"
+        "rangeBehavior": 1
+    },
     "highlight.regexes": {
         // highlight trailing whitespaces, alternative to possan.nbsp-vscode which is not configurable at all
         "([ 　\\t]+$)": {
@@ -158,6 +164,11 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         "(static\\s[\\s]?this\\(\\)|static\\s[\\s]?\\~this\\(\\)|shared\\s[\\s]?static\\s[\\s]?this\\(\\)|shared\\s[\\s]?static\\s[\\s]?\\~this\\(\\))": {
             "filterLanguageRegex": "^d$",
             "decorations": [ { "color": "#ce3102", "fontWeight": "normal" } ]
+        },
+        // D: catch-all exceptions block, C++ has `catch(...)` for this, but D needs to know the base exception type
+        "(\\bcatch[\\s]?\\()(Exception)(\\))": {
+            "filterLanguageRegex": "^d$",
+            "decorations": [ {}, { "color": "#aaaaaa" }, {} ]
         },
         // Ruby: highlight "self.", syntax highlighting doesn't match it as separate token
         "(\\bself)\\.": {
