@@ -82,37 +82,37 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ { "fontStyle": "italic", "fontWeight": "bold", "color": "#0057ae" } ]
         },
         // D: make [unknown/custom] identifier within version() bold
-        "(version)([\\s]?\\()(.*?)(\\))": {
+        "(\\bversion\\b)([\\s]?\\()(.*?)(\\))": {
             "filterLanguageRegex": "^d$",
             "decorations": [ {}, {}, { "fontWeight": "bold" }, {} ]
         },
         // D: version(none|all)
-        "(version)([\\s]?\\()(none|all)(\\))": {
+        "(\\bversion\\b)([\\s]?\\()(none|all)(\\))": {
             "filterLanguageRegex": "^d$",
             "decorations": [ {}, {}, { "fontWeight": "bold", "color": "#777777" }, {} ]
         },
         // D: version(endianness|architecture) - architecture list incomplete
-        "(version)([\\s]?\\()(LittleEndian|BigEndian|ARM|AArch64|X86|X86\\_64|WebAssembly|WASI)(\\))": {
+        "(\\bversion\\b)([\\s]?\\()(LittleEndian|BigEndian|ARM|AArch64|X86|X86\\_64|WebAssembly|WASI)(\\))": {
             "filterLanguageRegex": "^d$",
             "decorations": [ {}, {}, { "fontWeight": "bold", "color": "#075668" }, {} ]
         },
         // D: version(compiler vendor)
-        "(version)([\\s]?\\()(DigitalMars|LDC|GNU|SDC|D\\_NET)(\\))": {
+        "(\\bversion\\b)([\\s]?\\()(DigitalMars|LDC|GNU|SDC|D\\_NET)(\\))": {
             "filterLanguageRegex": "^d$",
             "decorations": [ {}, {}, { "fontWeight": "bold", "color": "#ab7826" }, {} ]
         },
         // D: version(C and C++ runtime)
-        "(version)([\\s]?\\()(CRuntime\\_Musl|CRuntime\\_Bionic|CRuntime\\_UClibc|CRuntime\\_DigitalMars|CRuntime\\_Microsoft|CRuntime\\_Glibc|CRuntime\\_Newlib|CRuntime\\_WASI|CppRuntime\\_Clang|CppRuntime\\_Gcc|CppRuntime\\_Microsoft|CppRuntime\\_DigitalMars|CppRuntime\\_Sun)(\\))": {
+        "(\\bversion\\b)([\\s]?\\()(CRuntime\\_Musl|CRuntime\\_Bionic|CRuntime\\_UClibc|CRuntime\\_DigitalMars|CRuntime\\_Microsoft|CRuntime\\_Glibc|CRuntime\\_Newlib|CRuntime\\_WASI|CppRuntime\\_Clang|CppRuntime\\_Gcc|CppRuntime\\_Microsoft|CppRuntime\\_DigitalMars|CppRuntime\\_Sun)(\\))": {
             "filterLanguageRegex": "^d$",
             "decorations": [ {}, {}, { "fontWeight": "bold", "color": "#739e7b" }, {} ]
         },
         // D: version(platform)
-        "(version)([\\s]?\\()(linux|OSX|iOS|TVOS|tvOS|WatchOS|watchOS|Darwin|FreeBSD|NetBSD|OpenBSD|DragonFlyBSD|BSD|Solaris|Windows|Win32|Win64|Posix|AIX|Haiku|SkyOS|SysV3|SysV4|Hurd|Android|Emscripten|PlayStation|PlayStation4|Cygwin|MinGW|FreeStanding)(\\))": {
+        "(\\bversion\\b)([\\s]?\\()(linux|OSX|iOS|TVOS|tvOS|WatchOS|watchOS|Darwin|FreeBSD|NetBSD|OpenBSD|DragonFlyBSD|BSD|Solaris|Windows|Win32|Win64|Posix|AIX|Haiku|SkyOS|SysV3|SysV4|Hurd|Android|Emscripten|PlayStation|PlayStation4|Cygwin|MinGW|FreeStanding)(\\))": {
             "filterLanguageRegex": "^d$",
             "decorations": [ {}, {}, { "fontWeight": "bold", "color": "#c72169" }, {} ]
         },
         // D: make else before version() same color as version()
-        "(else)\\s(version)[\\s]?\\(": {
+        "(else)\\s(\\bversion\\b)[\\s]?\\(": {
             "filterLanguageRegex": "^d$",
             "decorations": [ { "color": "#ce3102" }, {} ]
         },
@@ -131,10 +131,46 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "filterLanguageRegex": "^d$",
             "decorations": [ { "color": "#808000", "fontWeight": "bold" } ]
         },
-        // D: operator overloads
+        // D: operator overloads, visualize some of them with C++ style operator overloading for better recognization
         "(\\bopUnary\\b|\\bopIndexUnary\\b|\\bopCast\\b|\\bopBinaryRight\\b|\\bopBinary\\b|\\bopEquals\\b|\\bopCmp\\b|\\bopCall\\b|\\bopAssign\\b|\\bopIndexAssign\\b|\\bopSlice\\b|\\bopSliceAssign\\b|\\bopOpAssign\\b|\\bopIndexOpAssign\\b|\\bopDollar\\b|\\bopIndex\\b|\\bopDispatch\\b)": {
             "filterLanguageRegex": "^d$",
-            "decorations": [ { "color": "#808000" } ]
+            "decorations": [ { "color": "#ce3102" } ]
+        },
+        "(\\bopEquals\\b)": {
+            "filterLanguageRegex": "^d$",
+            "decorations": [ { "color": "#ce3102", "before": { "contentText": "operator== ", "color": "#bbbbbb" } } ]
+        },
+        "(\\bopCall\\b)": {
+            "filterLanguageRegex": "^d$",
+            "decorations": [ { "color": "#ce3102", "before": { "contentText": "operator() ", "color": "#bbbbbb" } } ]
+        },
+        "(\\bopDispatch\\b)": {
+            "filterLanguageRegex": "^d$",
+            "decorations": [ { "color": "#ce3102", "before": { "contentText": "operator.function() ", "color": "#bbbbbb" } } ]
+        },
+        "(\\bopCmp\\b)": {
+            "filterLanguageRegex": "^d$",
+            "decorations": [ { "color": "#ce3102", "before": { "contentText": "operator<> ", "color": "#bbbbbb" } } ]
+        },
+        "(\\bopAssign\\b)": {
+            "filterLanguageRegex": "^d$",
+            "decorations": [ { "color": "#ce3102", "before": { "contentText": "operator= ", "color": "#bbbbbb" } } ]
+        },
+        "(\\bopIndexAssign\\b|\\bopIndex\\b)": {
+            "filterLanguageRegex": "^d$",
+            "decorations": [ { "color": "#ce3102", "before": { "contentText": "operator[] ", "color": "#bbbbbb" } } ]
+        },
+        "(\\bopCast\\b)": {
+            "filterLanguageRegex": "^d$",
+            "decorations": [ { "color": "#ce3102", "before": { "contentText": "operator T ", "color": "#bbbbbb" } } ]
+        },
+        "(\\bopSlice\\b|\\bopSliceAssign\\b)": {
+            "filterLanguageRegex": "^d$",
+            "decorations": [ { "color": "#ce3102", "before": { "contentText": "operator[i..j] ", "color": "#bbbbbb" } } ]
+        },
+        "(\\bopDollar\\b)": {
+            "filterLanguageRegex": "^d$",
+            "decorations": [ { "color": "#ce3102", "before": { "contentText": "operator[i..$] ", "color": "#bbbbbb" } } ]
         },
         // D: cast() highlighting fix, don't colorize parenthesis
         "(\\bcast)([\\s]?\\()(.*?)(\\))": {
