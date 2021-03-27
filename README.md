@@ -71,10 +71,11 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
     },
     "highlight.regexes": {
         // highlight trailing whitespaces, alternative to possan.nbsp-vscode which is not configurable at all
-        "([ 　\\t]+$)": {
+        "([ 　\\t ]+$)": {
             "regexFlags": "gm",
             "decorations": [ {  "backgroundColor": "#b4000070" } ]
         },
+
         // D: make D class destructor italic, syntax highlighting doesn't match it as destructor
         "(\\~this)\\(\\)": {
             "filterLanguageRegex": "^d$",
@@ -200,6 +201,16 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "filterLanguageRegex": "^c$|^cpp$",
             "decorations": [ { "color": "#ce3102" } ]
         },
+        // C/C++: __attribute__(( known attributes ))
+        "(\\_\\_attribute\\_\\_)([\\s]?\\(\\()(visibility)": {
+            "filterLanguageRegex": "^c$|^cpp$",
+            "decorations": [ { "color": "#ce3102" }, {}, { "fontStyle": "italic" } ]
+        },
+        // C/C++: __attribute__((visibility("known values")))
+        "(\\_\\_attribute\\_\\_)([\\s]?\\(\\()(visibility)([\\s]?\\()(\\\"hidden\\\"|\\\"default\\\")": {
+            "filterLanguageRegex": "^c$|^cpp$",
+            "decorations": [ { "color": "#ce3102" }, {}, { "fontStyle": "italic" }, {}, { "color": "red", "fontStyle": "italic" } ]
+        },
         // C++: thread_local storage
         "(\\bthread\\_local\\b)": {
             "filterLanguageRegex": "^cpp$",
@@ -215,10 +226,21 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "filterLanguageRegex": "^c$|^cpp$|^d$",
             "decorations": [ { "color": "#20208c", "fontWeight": "bold" } ]
         },
-        // C++: semantic highlighting fix, ensure "auto" is yellow instead of purple
-        "(\\bauto\\b)[\\s]": {
+        // C++: semantic highlighting fix, ensure "auto" is yellow instead of purple (always use keyword color)
+        "(\\bauto\\b)[\\s]?": {
             "filterLanguageRegex": "^cpp$",
             "decorations": [ { "color": "#808000" } ]
+        },
+        // C++: semantic highlighting fix, ensure "nullptr" is ALWAYS yellow and never purple (it is purple at some places)
+        "(\\bnullptr\\b)": {
+            "filterLanguageRegex": "^cpp$",
+            "decorations": [ { "color": "#808000" } ]
+        },
+        // C++: abstract class method
+        "(\\bvirtual\\b)(.*?)(\\=[\\s]?)(0)([\\s]?;$)()": {
+            "filterLanguageRegex": "^cpp$",
+            "regexFlags": "gm",
+            "decorations": [ { "fontStyle": "italic" }, { "fontStyle": "italic" }, {}, {}, { "after": { "contentText": " abstract method", "color": "#aaaaaa" } } ]
         },
         // D: highlight some common classes and aliases as types (purple)
         "(\\bsize_t\\b|\\bptrdiff_t\\b)": {
