@@ -71,9 +71,14 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
     },
     "highlight.regexes": {
         // highlight trailing whitespaces, alternative to possan.nbsp-vscode which is not configurable at all
-        "([ 　\\t ]+$)": {
+        // (don't use '\s' here, because it causes highlighting bugs on enter key press)
+        "([ 　\\t  ]+$)": { // 0x20, U+3000, tab, U+00A0, U+202F
             "regexFlags": "gm",
             "decorations": [ {  "backgroundColor": "#b4000070" } ]
+        },
+        // highlight special whitespaces and unicode whitespaces
+        "( | )": { // U+00A0, U+202F
+            "decorations": [ { "backgroundColor": "#eeeeee20", "border": "1px solid #44444470" } ]
         },
 
         // D: make D class destructor italic, syntax highlighting doesn't match it as destructor
