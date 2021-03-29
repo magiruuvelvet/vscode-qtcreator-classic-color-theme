@@ -1048,8 +1048,8 @@
                 "entity.name.class.constructor.shared-static.d"
             ],
             "settings": {
-                "foreground": "#000000",
-                "fontStyle": "bold"
+                "foreground": "#ce3102",
+                "fontStyle": "normal"
             }
         },
         {
@@ -1058,8 +1058,8 @@
                 "entity.name.class.destructor.static.d"
             ],
             "settings": {
-                "foreground": "#000000",
-                "fontStyle": "bold"
+                "foreground": "#ce3102",
+                "fontStyle": "normal"
             }
         },
         {

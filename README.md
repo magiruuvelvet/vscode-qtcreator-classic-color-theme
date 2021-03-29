@@ -82,7 +82,7 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         },
 
         // D: make D class destructor italic, syntax highlighting doesn't match it as destructor
-        "(\\~this)\\(\\)": {
+        "(?<!static )(\\~this)\\(\\)": {
             "filterLanguageRegex": "^d$",
             "decorations": [ { "fontStyle": "italic", "fontWeight": "bold", "color": "#0057ae" } ]
         },
