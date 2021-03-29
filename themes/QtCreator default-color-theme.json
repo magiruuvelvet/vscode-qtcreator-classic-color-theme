@@ -1428,6 +1428,23 @@
                 "foreground": "#0057ae92",
                 "fontStyle": "normal"
             }
+        },
+        {
+            "name": "SQL: support and built-in functions",
+            "scope": "source.sql support.function.sql",
+            "settings": {
+                "foreground": "#8d268f"
+            }
+        },
+        {
+            "name": "SQL: database and table names",
+            "scope": [
+                "source.sql constant.other.database-name.sql",
+                "source.sql constant.other.table-name.sql"
+            ],
+            "settings": {
+                "foreground": "#000000"
+            }
         }
     ],
     "editor.semanticTokenColorCustomizations": {

@@ -243,12 +243,12 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ { "color": "#ce3102" } ]
         },
         // C/C++: __attribute__(( known attributes ))
-        "(\\_\\_attribute\\_\\_)([\\s]?\\(\\()(visibility)": {
+        "(\\_\\_attribute\\_\\_)([\\s]?\\(\\()(visibility|\\_\\_visibility\\_\\_)": {
             "filterLanguageRegex": "^c$|^cpp$",
             "decorations": [ { "color": "#ce3102" }, {}, { "fontStyle": "italic" } ]
         },
         // C/C++: __attribute__((visibility("known values")))
-        "(\\_\\_attribute\\_\\_)([\\s]?\\(\\()(visibility)([\\s]?\\()(\\\"hidden\\\"|\\\"default\\\")": {
+        "(\\_\\_attribute\\_\\_)([\\s]?\\(\\()(visibility|\\_\\_visibility\\_\\_)([\\s]?\\()(\\\"hidden\\\"|\\\"default\\\")": {
             "filterLanguageRegex": "^c$|^cpp$",
             "decorations": [ { "color": "#ce3102" }, {}, { "fontStyle": "italic" }, {}, { "color": "red", "fontStyle": "italic" } ]
         },
