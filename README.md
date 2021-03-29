@@ -284,10 +284,10 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ { "fontStyle": "italic" }, { "fontStyle": "italic" }, {}, {}, { "after": { "contentText": " abstract method", "color": "#aaaaaa" } } ]
         },
         // C/C++: #if 0 ... #endif block
-        "(^#if 0)(.*?)(^#endif)": {
+        "(^#if 0)(.*?)(^#endif|^#else)": {
             "filterLanguageRegex": "^c$|^cpp$",
             "regexFlags": "gms",
-            "decorations": [ {}, { "color": "#aaaaaa" }, {} ]
+            "decorations": [ {}, { "backgroundColor": "#aaaaaa30", "isWholeLine": true }, {} ]
         },
         // D: highlight some common classes and aliases as types (purple)
         "(\\bsize_t\\b|\\bptrdiff_t\\b)": {
@@ -358,15 +358,15 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ { "color": "#006e28" }, { "color": "#006e28", "fontStyle": "italic" } ]
         },
         // diff: inserted and deleted lines
-        "(^\\+)(.*)": {
+        "(^\\+[^+])(.*)": {
             "filterLanguageRegex": "^diff$",
             "regexFlags": "gm",
-            "decorations": [ { "backgroundColor": "#006e2805" }, { "backgroundColor": "#006e2805" } ]
+            "decorations": [ {}, { "backgroundColor": "#006e2808", "isWholeLine": true } ]
         },
-        "(^\\-)(.*)": {
+        "(^\\-[^-])(.*)": {
             "filterLanguageRegex": "^diff$",
             "regexFlags": "gm",
-            "decorations": [ { "backgroundColor": "#bf030305" }, { "backgroundColor": "#bf030305" } ]
+            "decorations": [ {}, { "backgroundColor": "#bf030308", "isWholeLine": true } ]
         }
     }
 }

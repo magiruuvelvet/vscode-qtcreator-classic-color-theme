@@ -175,7 +175,12 @@
                 "entity.name.other.preprocessor.macro.predefined.__PRETTY_FUNCTION__.cpp",
                 "entity.name.other.preprocessor.macro.predefined.__FUNCTION__.cpp",
                 "entity.name.other.preprocessor.macro.predefined.__FILE__.cpp",
-                "entity.name.other.preprocessor.macro.predefined.__LINE__.cpp"
+                "entity.name.other.preprocessor.macro.predefined.__LINE__.cpp",
+                "entity.name.other.preprocessor.macro.predefined.probably.PRETTY_FUNCTION.c",
+                "entity.name.other.preprocessor.macro.predefined.__PRETTY_FUNCTION__.c",
+                "entity.name.other.preprocessor.macro.predefined.__FUNCTION__.c",
+                "entity.name.other.preprocessor.macro.predefined.__FILE__.c",
+                "entity.name.other.preprocessor.macro.predefined.__LINE__.c"
             ],
             "settings": {
                 "foreground": "#20208c",
@@ -277,6 +282,7 @@
                 "entity.name.type.ts",
                 "entity.name.type.js",
                 "entity.name.type.cpp",
+                "entity.name.type.c",
                 "entity.name.type.enum.cpp",
                 "entity.name.type.enum.d",
                 "variable.other.enummember.cpp"
@@ -419,6 +425,7 @@
                 "entity.name.class",
                 "entity.name.module",
                 "entity.name.type.struct.cpp",
+                "entity.name.type.struct.c",
                 "entity.name.type.struct.d"
             ],
             "settings": {
@@ -526,7 +533,9 @@
                 "constant.character",
                 "constant",
                 "keyword.other.unit.suffix.integer.cpp",
-                "keyword.other.unit.hexadecimal.cpp"
+                "keyword.other.unit.hexadecimal.cpp",
+                "keyword.other.unit.suffix.integer.c",
+                "keyword.other.unit.hexadecimal.c"
             ],
             "settings": {
                 "foreground": "#000080"
@@ -540,7 +549,8 @@
                 "punctuation.definition.string.end",
                 "punctuation.definition.string.template.begin.js",
                 "punctuation.definition.string.template.end.js",
-                "meta.preprocessor.include.cpp"
+                "meta.preprocessor.include.cpp",
+                "meta.preprocessor.include.c"
             ],
             "settings": {
                 "foreground": "#008000"
@@ -1205,7 +1215,9 @@
             "name": "C++: reference and pointer",
             "scope": [
                 "storage.modifier.reference.cpp",
-                "storage.modifier.pointer.cpp"
+                "storage.modifier.pointer.cpp",
+                "storage.modifier.reference.c",
+                "storage.modifier.pointer.c"
             ],
             "settings": {
                 "foreground": "#000000"
@@ -1393,6 +1405,28 @@
             "settings": {
                 "foreground": "#bf0303",
                 "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Diff: From File Header",
+            "scope": [
+                "source.diff meta.diff.header.from-file",
+                "source.diff meta.diff.header.from-file punctuation"
+            ],
+            "settings": {
+                "foreground": "#0057ae92",
+                "fontStyle": "normal"
+            }
+        },
+        {
+            "name": "Diff: To File Header",
+            "scope": [
+                "source.diff meta.diff.header.to-file",
+                "source.diff meta.diff.header.to-file punctuation"
+            ],
+            "settings": {
+                "foreground": "#0057ae92",
+                "fontStyle": "normal"
             }
         }
     ],
