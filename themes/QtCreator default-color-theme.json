@@ -157,8 +157,11 @@
                 "keyword.control.directive",
                 "entity.name.function.preprocessor",
                 "punctuation.definition.directive.cpp",
+                "punctuation.definition.directive.c",
                 "meta.preprocessor.include.cpp",
-                "meta.preprocessor.macro.cpp"
+                "meta.preprocessor.include.c",
+                "meta.preprocessor.macro.cpp",
+                "meta.preprocessor.macro.c",
             ],
             "settings": {
                 "foreground": "#000080"
@@ -1332,6 +1335,64 @@
             "scope": "source.systemdUnitFile entity.name.tag",
             "settings": {
                 "foreground": "#0057ae"
+            }
+        },
+        {
+            "name": "Diff: Header",
+            "scope": [
+                "source.diff meta.diff.header"
+            ],
+            "settings": {
+                "foreground": "#000000",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Diff: Range",
+            "scope": [
+                "source.diff meta.diff.range",
+                "source.diff punctuation.definition.range"
+            ],
+            "settings": {
+                "foreground": "#0057ae"
+            }
+        },
+        {
+            "name": "Diff: Inserted Lines",
+            "scope": [
+                "source.diff markup.inserted"
+            ],
+            "settings": {
+                "foreground": "#006e28",
+            }
+        },
+        {
+            "name": "Diff: Inserted Lines (Punctuation)",
+            "scope": [
+                "source.diff markup.inserted punctuation"
+            ],
+            "settings": {
+                "foreground": "#006e28",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Diff: Deleted Lines",
+            "scope": [
+                "source.diff markup.deleted"
+            ],
+            "settings": {
+                "foreground": "#bf0303"
+            }
+        },
+        {
+            "name": "Diff: Deleted Lines (Punctuation)",
+            "scope": [
+                "source.diff markup.deleted punctuation"
+            ],
+            "settings": {
+                "foreground": "#bf0303",
+                "fontStyle": "bold"
             }
         }
     ],
