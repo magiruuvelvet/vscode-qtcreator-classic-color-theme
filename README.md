@@ -198,7 +198,7 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ { "color": "#808000" } ]
         },
         // D: special object functions available almost everywhere
-        "(\\.)(idup|dup|length|ptr|funcptr|stringof|alignof|mangleof|init|sizeof|tupleof|classinfo)([\\s\\)\\]\\},;\\.]|$)": {
+        "(\\.)(idup|dup|length|ptr|funcptr|stringof|alignof|mangleof|init|sizeof|tupleof|classinfo)([\\s\\)\\]\\},;\\.\\+\\-\\|\\&]|$)": {
             "filterLanguageRegex": "^d$",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
         },
@@ -230,6 +230,11 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         "(\\bdef\\s)(initialize)([\\s\\(]|$)": {
             "filterLanguageRegex": "^ruby$",
             "regexFlags": "gm",
+            "decorations": [ {}, { "color": "#0057ae" }, {} ]
+        },
+        // Ruby: special object functions available almost everywhere
+        "(\\.)(nil\\?|to\\_i|to\\_f|to\\_c|to\\_s|to\\_r)([\\s\\)\\]\\},;\\.\\+\\-\\|\\&]|$)": {
+            "filterLanguageRegex": "^ruby$",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
         },
         // HTTP: highlight placeholders, syntax highlighting doesn't implement a token for this
@@ -369,10 +374,15 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ {}, { "backgroundColor": "#bf030308", "isWholeLine": true } ]
         },
         // Slim: code line
-        "(^[ ]*?)([-=])(.*?$)": {
+        "(^[ ]*?)([-=])([^-=])(.*?$)": {
             "filterLanguageRegex": "^slim\\-lang$|^slim$",
             "regexFlags": "gm",
-            "decorations": [ {}, { "color": "#ce3102", "fontWeight": "bold" }, { "backgroundColor": "#eeeeee60", "isWholeLine": true } ]
+            "decorations": [ {}, { "color": "#ce3102", "fontWeight": "bold" }, {}, { "backgroundColor": "#eeeeee60", "isWholeLine": true } ]
+        },
+        "(^[ ]*?)(==)([^-=])(.*?$)": {
+            "filterLanguageRegex": "^slim\\-lang$|^slim$",
+            "regexFlags": "gm",
+            "decorations": [ {}, { "color": "#ce3102", "fontWeight": "bold" }, {}, { "backgroundColor": "#eeeeee60", "isWholeLine": true } ]
         }
     }
 }
