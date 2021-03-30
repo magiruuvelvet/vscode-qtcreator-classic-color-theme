@@ -367,6 +367,12 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "filterLanguageRegex": "^diff$",
             "regexFlags": "gm",
             "decorations": [ {}, { "backgroundColor": "#bf030308", "isWholeLine": true } ]
+        },
+        // Slim: code line
+        "(^[ ]*?)([-=])(.*?$)": {
+            "filterLanguageRegex": "^slim\\-lang$|^slim$",
+            "regexFlags": "gm",
+            "decorations": [ {}, { "color": "#ce3102", "fontWeight": "bold" }, { "backgroundColor": "#eeeeee60", "isWholeLine": true } ]
         }
     }
 }
