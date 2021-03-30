@@ -658,7 +658,7 @@
             ],
             "settings": {
                 "foreground": "#000000",
-                "fontStyle": "normal"
+                "fontStyle": ""
             }
         },
         {
@@ -677,7 +677,7 @@
             ],
             "settings": {
                 "foreground": "#5484cb",
-                "fontStyle": "normal"
+                "fontStyle": ""
             }
         },
         {
@@ -720,7 +720,8 @@
                 "support.constant.property-value"
             ],
             "settings": {
-                "foreground": "#000000"
+                "foreground": "#000000",
+                "fontStyle": ""
             }
         },
         {
@@ -1049,7 +1050,7 @@
             ],
             "settings": {
                 "foreground": "#ce3102",
-                "fontStyle": "normal"
+                "fontStyle": ""
             }
         },
         {
@@ -1059,7 +1060,7 @@
             ],
             "settings": {
                 "foreground": "#ce3102",
-                "fontStyle": "normal"
+                "fontStyle": ""
             }
         },
         {
@@ -1147,7 +1148,7 @@
             "scope": "entity.name.tag.yaml",
             "settings": {
                 "foreground": "#8d268f",
-                "fontStyle": "normal"
+                "fontStyle": ""
             }
         },
         {
@@ -1163,7 +1164,7 @@
                 "source.systemdUnitFile entity.name.tag"
             ],
             "settings": {
-                "fontStyle": "normal"
+                "fontStyle": ""
             }
         },
         {
@@ -1184,7 +1185,7 @@
             ],
             "settings": {
                 "foreground": "#000000",
-                "fontStyle": "normal"
+                "fontStyle": ""
             }
         },
         {
@@ -1208,7 +1209,7 @@
             ],
             "settings": {
                 "foreground": "#808000",
-                "fontStyle": "normal"
+                "fontStyle": ""
             }
         },
         {
@@ -1323,7 +1324,7 @@
             "scope": "source.http http.headers entity.name.tag.http",
             "settings": {
                 "foreground": "#8d268f",
-                "fontStyle": "normal"
+                "fontStyle": ""
             }
         },
         {
@@ -1339,7 +1340,7 @@
             "scope": "source.http http.headers string.other.http",
             "settings": {
                 "foreground": "#000000",
-                "fontStyle": "normal"
+                "fontStyle": ""
             }
         },
         {
@@ -1415,7 +1416,7 @@
             ],
             "settings": {
                 "foreground": "#0057ae92",
-                "fontStyle": "normal"
+                "fontStyle": ""
             }
         },
         {
@@ -1426,7 +1427,7 @@
             ],
             "settings": {
                 "foreground": "#0057ae92",
-                "fontStyle": "normal"
+                "fontStyle": ""
             }
         },
         {
@@ -1445,7 +1446,17 @@
             "settings": {
                 "foreground": "#000000"
             }
-        }
+        },
+        // disabled because it depends on: https://github.com/microsoft/vscode-textmate/issues/52
+        // otherwise the entire line is highlighted
+        // {
+        //     "name": "Slim: code line start marker",
+        //     "scope": "text.slim meta.line.ruby.slim - source.ruby.embedded.slim",
+        //     "settings": {
+        //         "foreground": "#ce3102",
+        //         "fontStyle": "bold"
+        //     }
+        // },
     ],
     "editor.semanticTokenColorCustomizations": {
         "rules": {
