@@ -198,7 +198,7 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ { "color": "#808000" } ]
         },
         // D: special object functions available almost everywhere
-        "(\\.)(idup|dup|length|ptr|funcptr|stringof|alignof|mangleof|init|sizeof|tupleof|classinfo)([\\s\\)\\]\\},;\\.\\+\\-\\|\\&]|$)": {
+        "(\\.)(idup|dup|length|ptr|funcptr|stringof|alignof|mangleof|init|sizeof|tupleof|classinfo)([\\s\\(\\)\\[\\]\\{\\},;\\.\\+\\-\\|\\&]|$)": {
             "filterLanguageRegex": "^d$",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
         },
@@ -233,7 +233,12 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
         },
         // Ruby: special object functions available almost everywhere
-        "(\\.)(nil\\?|to\\_i|to\\_f|to\\_c|to\\_s|to\\_r)([\\s\\)\\]\\},;\\.\\+\\-\\|\\&]|$)": {
+        "(\\.)(dup|nil\\?|negative\\?|positive\\?|freeze|frozen\\?|to\\_i|to\\_f|to\\_c|to\\_s|to\\_r|to\\_a|to\\_h|to\\_sym)([\\s\\(\\)\\[\\]\\{\\},;\\.\\+\\-\\|\\&]|$)": {
+            "filterLanguageRegex": "^ruby$",
+            "decorations": [ {}, { "color": "#0057ae" }, {} ]
+        },
+        // Ruby: ActiveSupport core extensions
+        "(\\.)(deep\\_dup|blank\\?|present\\?|presence|in\\?|duplicable\\?)([\\s\\(\\)\\[\\]\\{\\},;\\.\\+\\-\\|\\&]|$)": {
             "filterLanguageRegex": "^ruby$",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
         },
