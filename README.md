@@ -226,6 +226,15 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "filterLanguageRegex": "^ruby$",
             "decorations": [ {}, { "fontWeight": "bold", "color": "#ce3102" }, { "color": "#8d268f" } ]
         },
+        // Ruby: Solargraph special comments
+        "(#[ ]*?)(\\@\\!override\\b|\\@yieldself\\b|\\@type\\b)(.*)": {
+            "filterLanguageRegex": "^ruby$",
+            "decorations": [ {}, { "color": "#ce3102" }, {} ]
+        },
+        "(#[ ]*?)(\\@type\\b)(.*?)(\\[)(.*?)(\\])": {
+            "filterLanguageRegex": "^ruby$",
+            "decorations": [ {}, { "color": "#ce3102" }, {}, { "color": "#000000" }, { "color": "#808000" }, { "color": "#000000" } ]
+        },
         // Ruby: class constructor
         "(\\bdef\\s)(initialize)([\\s\\(]|$)": {
             "filterLanguageRegex": "^ruby$",
@@ -233,13 +242,13 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
         },
         // Ruby: special object functions available almost everywhere
-        "(\\.)(dup|nil\\?|negative\\?|positive\\?|freeze|frozen\\?|to\\_i|to\\_f|to\\_c|to\\_s|to\\_r|to\\_a|to\\_h|to\\_sym)([\\s\\(\\)\\[\\]\\{\\},;\\.\\+\\-\\|\\&]|$)": {
-            "filterLanguageRegex": "^ruby$",
+        "(\\.)(dup|nil\\?|empty\\?|negative\\?|positive\\?|freeze|frozen\\?|to\\_i|to\\_f|to\\_c|to\\_s|to\\_r|to\\_a|to\\_h|to\\_sym|to\\_json|is\\_a\\?)([\\s\\(\\)\\[\\]\\{\\},;\\.\\+\\-\\|\\&]|$)": {
+            "filterLanguageRegex": "^ruby$|^slim\\-lang$|^slim$",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
         },
         // Ruby: ActiveSupport core extensions
         "(\\.)(deep\\_dup|blank\\?|present\\?|presence|in\\?|duplicable\\?)([\\s\\(\\)\\[\\]\\{\\},;\\.\\+\\-\\|\\&]|$)": {
-            "filterLanguageRegex": "^ruby$",
+            "filterLanguageRegex": "^ruby$|^slim\\-lang$|^slim$",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
         },
         // HTTP: highlight placeholders, syntax highlighting doesn't implement a token for this
