@@ -218,13 +218,13 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ { "color": "#808000" } ]
         },
         // Ruby: rubocop special comments
-        "(\\#\\s)(rubocop\\:enable)(.*)": {
+        "(#[ ]*?)(rubocop\\:enable)(\\s)(.*)": {
             "filterLanguageRegex": "^ruby$",
-            "decorations": [ {}, { "fontWeight": "bold", "color": "#ce3102" }, { "color": "#8d268f" } ]
+            "decorations": [ {}, { "fontWeight": "bold", "color": "#ce3102" }, {}, { "color": "#8d268f" } ]
         },
-        "(\\#\\s)(rubocop\\:disable)(.*)": {
+        "(#[ ]*?)(rubocop\\:disable)(\\s)(.*)": {
             "filterLanguageRegex": "^ruby$",
-            "decorations": [ {}, { "fontWeight": "bold", "color": "#ce3102" }, { "color": "#8d268f" } ]
+            "decorations": [ {}, { "fontWeight": "bold", "color": "#ce3102" }, {}, { "color": "#8d268f" } ]
         },
         // Ruby: Solargraph special comments
         "(#[ ]*?)(\\@\\!override\\b|\\@yieldself\\b|\\@type\\b)(.*)": {
@@ -235,11 +235,22 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "filterLanguageRegex": "^ruby$",
             "decorations": [ {}, { "color": "#ce3102" }, {}, { "color": "#000000" }, { "color": "#808000" }, { "color": "#000000" } ]
         },
+        // Ruby: frozen string literal comment
+        "(#[ ]*?)(\\bfrozen\\_string\\_literal\\b)(\\:)([ ]*?)(\\btrue\\b|\\bfalse\\b)$": {
+            "filterLanguageRegex": "^ruby$",
+            "regexFlags": "gm",
+            "decorations": [ {}, { "color": "#0057ae", "fontWeight": "bold" }, {}, {}, { "color": "#808000" } ]
+        },
         // Ruby: class constructor
         "(\\bdef\\s)(initialize)([\\s\\(]|$)": {
             "filterLanguageRegex": "^ruby$",
             "regexFlags": "gm",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
+        },
+        // Ruby: special keywords
+        "(\\bprivate\\_class\\_method\\b)": {
+            "filterLanguageRegex": "^ruby$",
+            "decorations": [ { "color": "#0057ae", "fontWeight": "bold" } ]
         },
         // Ruby: special object functions available almost everywhere
         "(\\.)(dup|nil\\?|empty\\?|negative\\?|positive\\?|freeze|frozen\\?|to\\_i|to\\_f|to\\_c|to\\_s|to\\_r|to\\_a|to\\_h|to\\_sym|to\\_json|as\\_json|is\\_a\\?)([\\s\\(\\)\\[\\]\\{\\},;\\.\\+\\-\\|\\&]|$)": {
