@@ -199,6 +199,7 @@
                 "keyword.operator.sizeof",
                 "keyword.operator.expression.of.js",
                 "keyword.operator.expression.in.js",
+                "keyword.operator.expression.typeof.js",
                 "keyword.operator.typeid.cpp",
                 "#keyword.control.in.d", // typo in textmate grammar
                 "keyword.control.in.d",

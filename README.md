@@ -242,7 +242,7 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
         },
         // Ruby: special object functions available almost everywhere
-        "(\\.)(dup|nil\\?|empty\\?|negative\\?|positive\\?|freeze|frozen\\?|to\\_i|to\\_f|to\\_c|to\\_s|to\\_r|to\\_a|to\\_h|to\\_sym|to\\_json|is\\_a\\?)([\\s\\(\\)\\[\\]\\{\\},;\\.\\+\\-\\|\\&]|$)": {
+        "(\\.)(dup|nil\\?|empty\\?|negative\\?|positive\\?|freeze|frozen\\?|to\\_i|to\\_f|to\\_c|to\\_s|to\\_r|to\\_a|to\\_h|to\\_sym|to\\_json|as\\_json|is\\_a\\?)([\\s\\(\\)\\[\\]\\{\\},;\\.\\+\\-\\|\\&]|$)": {
             "filterLanguageRegex": "^ruby$|^slim\\-lang$|^slim$",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
         },
