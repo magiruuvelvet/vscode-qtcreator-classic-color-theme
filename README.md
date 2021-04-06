@@ -373,6 +373,12 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "filterLanguageRegex": "^shellscript$",
             "decorations": [ { "color": "#5484cb80", "fontStyle": "italic" } ]
         },
+        // ShellScript: continued line (\): highlight fix
+        // "(\\\n)([ ]*?)(\\b[\\w].*?[ ]|\\b[\\w].*?\\b)": {
+        //     "filterLanguageRegex": "^shellscript$",
+        //     "regexFlags": "gm",
+        //     "decorations": [ {}, {}, { "color": "#000000" } ]
+        // },
         // SQL: highlighting rules for MariaDB/MySQL dialect
         "(#.*)": {
             "filterLanguageRegex": "^sql$",

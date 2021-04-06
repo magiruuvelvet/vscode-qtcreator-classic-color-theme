@@ -778,13 +778,29 @@
                 "keyword.control.at-rule.media.scss",
                 "keyword.control.at-rule.media.css",
                 "keyword.control.at-rule.import.scss",
+                "keyword.control.at-rule.import.css",
                 "keyword.control.at-rule.charset.scss",
                 "keyword.control.at-rule.charset.css",
+                "keyword.control.at-rule.mixin.scss",
+                "keyword.control.at-rule.mixin.css",
+                "keyword.control.at-rule.include.scss",
+                "keyword.control.at-rule.include.css",
+                "keyword.control.at-rule.scss",
                 "keyword.control.at-rule.css"
             ],
             "settings": {
                 "foreground": "#000000",
                 "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "SCSS: @at mixin/include functions",
+            "scope": [
+                "meta.at-rule.mixin.scss entity.name.function",
+                "meta.at-rule.include.scss entity.name.function"
+            ],
+            "settings": {
+                "foreground": "#8d268f"
             }
         },
         {
@@ -794,6 +810,13 @@
             ],
             "settings": {
                 "foreground": "#808000"
+            }
+        },
+        {
+            "name": "SCSS: variables",
+            "scope": "source.css.scss variable.scss",
+            "settings": {
+                "foreground": "#ce3102"
             }
         },
         {
