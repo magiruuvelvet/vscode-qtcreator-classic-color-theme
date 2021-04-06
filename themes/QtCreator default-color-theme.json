@@ -804,6 +804,17 @@
             }
         },
         {
+            "name": "SCSS: @debug",
+            "scope": [
+                "keyword.control.warn.scss",
+                "keyword.control.warn.scss punctuation.definition.keyword.scss"
+            ],
+            "settings": {
+                "foreground": "#ce3102",
+                "fontStyle": "bold"
+            }
+        },
+        {
             "name": "SCSS: operators",
             "scope": [
                 "keyword.operator.logical.scss"
