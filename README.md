@@ -247,8 +247,8 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "regexFlags": "gm",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
         },
-        // Ruby: special keywords
-        "(\\bprivate\\_class\\_method\\b)": {
+        // Ruby: special keywords and functions
+        "(\\bprivate\\_class\\_method\\b|\\bclass\\_eval\\b|\\bmodule\\_eval\\b)": {
             "filterLanguageRegex": "^ruby$",
             "decorations": [ { "color": "#0057ae", "fontWeight": "bold" } ]
         },
@@ -261,6 +261,11 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         "(\\.)(deep\\_dup|blank\\?|present\\?|presence|in\\?|duplicable\\?)([\\s\\(\\)\\[\\]\\{\\},;\\.\\+\\-\\|\\&]|$)": {
             "filterLanguageRegex": "^ruby$|^slim\\-lang$|^slim$",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
+        },
+        // Ruby: lambda
+        "(?<!#.*?)(\\blambda\\b)": {
+            "filterLanguageRegex": "^ruby$",
+            "decorations": [ { "color": "#ce3102" } ]
         },
         // HTTP: highlight placeholders, syntax highlighting doesn't implement a token for this
         "(\\{\\{.*?\\}\\})": {
