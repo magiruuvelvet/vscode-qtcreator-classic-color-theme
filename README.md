@@ -226,12 +226,12 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "filterLanguageRegex": "^ruby$",
             "decorations": [ {}, { "fontWeight": "bold", "color": "#ce3102" }, {}, { "color": "#8d268f" } ]
         },
-        // Ruby: Solargraph special comments
-        "(#[ ]*?)(\\@\\!override\\b|\\@yieldself\\b|\\@type\\b)(.*)": {
+        // Ruby: Solargraph special comments and custom extensions (custom: @throws)
+        "(#[ ]*?)(\\@\\!override\\b|\\@yieldself\\b|\\@type\\b|\\@throws\\b)(.*)": {
             "filterLanguageRegex": "^ruby$",
             "decorations": [ {}, { "color": "#ce3102" }, {} ]
         },
-        "(#[ ]*?)(\\@type\\b)(.*?)(\\[)(.*?)(\\])": {
+        "(#[ ]*?)(\\@type\\b|\\@throws\\b)(.*?)(\\[)(.*?)(\\])": {
             "filterLanguageRegex": "^ruby$",
             "decorations": [ {}, { "color": "#ce3102" }, {}, { "color": "#000000" }, { "color": "#808000" }, { "color": "#000000" } ]
         },
@@ -253,12 +253,12 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ { "color": "#0057ae", "fontWeight": "bold" } ]
         },
         // Ruby: special object functions available almost everywhere
-        "(\\.)(dup|nil\\?|empty\\?|negative\\?|positive\\?|freeze|frozen\\?|to\\_i|to\\_f|to\\_c|to\\_s|to\\_r|to\\_a|to\\_h|to\\_sym|to\\_json|as\\_json|is\\_a\\?)([\\s\\(\\)\\[\\]\\{\\},;\\.\\+\\-\\|\\&]|$)": {
+        "(\\.)(dup|nil\\?|empty\\?|negative\\?|positive\\?|freeze|frozen\\?|to\\_i|to\\_f|to\\_c|to\\_s|to\\_r|to\\_a|to\\_h|to\\_sym|to\\_json|as\\_json|is\\_a\\?|instance\\_of\\?)([\\s\\(\\)\\[\\]\\{\\},;\\.\\+\\-\\|\\&]|$)": {
             "filterLanguageRegex": "^ruby$|^slim\\-lang$|^slim$",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
         },
         // Ruby: ActiveSupport core extensions
-        "(\\.)(deep\\_dup|blank\\?|present\\?|presence|in\\?|duplicable\\?)([\\s\\(\\)\\[\\]\\{\\},;\\.\\+\\-\\|\\&]|$)": {
+        "(\\.)(deep\\_dup|blank\\?|present\\?|presence|in\\?|duplicable\\?|squish)([\\s\\(\\)\\[\\]\\{\\},;\\.\\+\\-\\|\\&]|$)": {
             "filterLanguageRegex": "^ruby$|^slim\\-lang$|^slim$",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
         },
@@ -419,6 +419,11 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "filterLanguageRegex": "^slim\\-lang$|^slim$",
             "regexFlags": "gm",
             "decorations": [ {}, { "color": "#ce3102", "fontWeight": "bold" }, {}, { "backgroundColor": "#eeeeee60", "isWholeLine": true } ]
+        },
+        // JavaScript/TypeScript: special object functions available almost everywhere
+        "(\\.)(length)([\\s\\(\\)\\[\\]\\{\\},;\\.\\+\\-\\|\\&]|$)": {
+            "filterLanguageRegex": "^javascript$|^typescript%",
+            "decorations": [ {}, { "color": "#0057ae" }, {} ]
         }
     }
 }

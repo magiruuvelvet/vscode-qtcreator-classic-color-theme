@@ -737,6 +737,11 @@
             "name": "CSS: class names",
             "scope": [
                 "source.css entity.other.attribute-name.class.css",
+                "source.css entity.other.attribute-name.class",
+
+                "source.css entity.other.attribute-name.id.css",
+                "source.css entity.other.attribute-name.id",
+
                 "source.css punctuation.definition.entity.css"
             ],
             "settings": {
@@ -776,16 +781,27 @@
             "name": "CSS/SCSS: @at rules (@media, @import, @charset)",
             "scope": [
                 "keyword.control.at-rule.media.scss",
+                "keyword.control.at-rule.media.less",
                 "keyword.control.at-rule.media.css",
+
                 "keyword.control.at-rule.import.scss",
+                "keyword.control.at-rule.import.less",
                 "keyword.control.at-rule.import.css",
+
                 "keyword.control.at-rule.charset.scss",
+                "keyword.control.at-rule.charset.less",
                 "keyword.control.at-rule.charset.css",
+
                 "keyword.control.at-rule.mixin.scss",
+                "keyword.control.at-rule.mixin.less",
                 "keyword.control.at-rule.mixin.css",
+
                 "keyword.control.at-rule.include.scss",
+                "keyword.control.at-rule.include.less",
                 "keyword.control.at-rule.include.css",
+
                 "keyword.control.at-rule.scss",
+                "keyword.control.at-rule.less",
                 "keyword.control.at-rule.css"
             ],
             "settings": {
