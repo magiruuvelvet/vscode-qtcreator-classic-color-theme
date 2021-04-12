@@ -247,6 +247,17 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "regexFlags": "gm",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
         },
+        // Ruby: special object methods
+        "(\\bdef\\s)(to\\_i|to\\_f|to\\_c|to\\_s|to\\_r|to\\_a|to\\_h|to\\_sym|method\\_missing|respond\\_to\\_missing\\?)([\\s\\(]|$)": {
+            "filterLanguageRegex": "^ruby$",
+            "regexFlags": "gm",
+            "decorations": [ {}, { "color": "#0057ae" }, {} ]
+        },
+        "(\\bdef\\s)(\\!|\\=\\=|\\!\\=)([\\s\\(]|$)": {
+            "filterLanguageRegex": "^ruby$",
+            "regexFlags": "gm",
+            "decorations": [ {}, { "color": "#0057ae", "fontWeight": "bold" }, {} ]
+        },
         // Ruby: special keywords and functions
         "(\\bprivate\\_class\\_method\\b|\\bclass\\_eval\\b|\\bmodule\\_eval\\b)": {
             "filterLanguageRegex": "^ruby$",
