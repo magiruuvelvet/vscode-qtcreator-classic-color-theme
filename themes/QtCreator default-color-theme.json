@@ -674,7 +674,9 @@
             "name": "HTML: Attribute Names",
             "scope": [
                 "meta.tag entity.other.attribute-name",
-                "entity.other.attribute-name.html"
+                "entity.other.attribute-name.html",
+                "text.slim entity.other.attribute-name.event.slim",
+                "text.slim meta.tag entity.other.attribute-name.event.slim"
             ],
             "settings": {
                 "foreground": "#5484cb",

@@ -431,8 +431,13 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "regexFlags": "gm",
             "decorations": [ {}, { "color": "#ce3102", "fontWeight": "bold" }, {}, { "backgroundColor": "#eeeeee60", "isWholeLine": true } ]
         },
+        // Slim: HTML constants
+        "(?<!\\/.*?)(\\&nbsp\\;|\\&amp\\;)": {
+            "filterLanguageRegex": "^slim\\-lang$|^slim$",
+            "decorations": [ { "color": "#AB6526" } ]
+        },
         // JavaScript/TypeScript: special object functions available almost everywhere
-        "(\\.)(length)([\\s\\(\\)\\[\\]\\{\\},;\\.\\+\\-\\|\\&]|$)": {
+        "(?<!\\/\\/.*?)(\\.)(length|prototype|constructor)([\\s\\(\\)\\[\\]\\{\\},;\\.\\+\\-\\|\\&]|$)": {
             "filterLanguageRegex": "^javascript$|^typescript%",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
         }
