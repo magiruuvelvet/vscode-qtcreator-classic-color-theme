@@ -440,6 +440,19 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         "(?<!\\/\\/.*?)(\\.)(length|prototype|constructor)([\\s\\(\\)\\[\\]\\{\\},;\\.\\+\\-\\|\\&]|$)": {
             "filterLanguageRegex": "^javascript$|^typescript%",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
+        },
+        // Security: code evaluation function
+        "(\\beval\\b)": { // (?<!#.*?) also show when commented out
+            "filterLanguageRegex": "^ruby$",
+            "decorations": [ { "color": "#ef0000", "fontWeight": "bold", "backgroundColor": "#eaeaea" } ]
+        },
+        "(\\beval\\b)()": { // (?<!\\/\\/.*?) also show when commented out
+            "filterLanguageRegex": "^javascript$|^typescript$",
+            "decorations": [ { "color": "#ef0000", "fontWeight": "bold", "backgroundColor": "#eaeaea" } ]
+        },
+        "(\\beval\\b)()()": {
+            "filterLanguageRegex": "^ruby$|^javascript$|^typescript$",
+            "decorations": [ { "backgroundColor": "#eaeaea", "isWholeLine": true } ]
         }
     }
 }
