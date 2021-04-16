@@ -758,13 +758,25 @@
             }
         },
         {
-            "name": "CSS: pseudo selector",
+            "name": "CSS: pseudo class",
             "scope": [
                 "source.scss entity.other.attribute-name.pseudo-class",
+                "source.less entity.other.attribute-name.pseudo-class",
                 "source.css entity.other.attribute-name.pseudo-class"
             ],
             "settings": {
                 "foreground": "#AB6526",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "CSS: pseudo element",
+            "scope": [
+                "source.scss entity.other.attribute-name.pseudo-element",
+                "source.less entity.other.attribute-name.pseudo-element",
+                "source.css entity.other.attribute-name.pseudo-element"
+            ],
+            "settings": {
                 "fontStyle": "italic"
             }
         },
