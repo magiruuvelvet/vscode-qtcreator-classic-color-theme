@@ -447,7 +447,7 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ { "color": "#ef0000", "fontWeight": "bold", "backgroundColor": "#eaeaea" } ]
         },
         "(\\beval\\b)()": { // (?<!\\/\\/.*?) also show when commented out
-            "filterLanguageRegex": "^javascript$|^typescript$",
+            "filterLanguageRegex": "^ruby$|^javascript$|^typescript$",
             "decorations": [ { "color": "#ef0000", "fontWeight": "bold", "backgroundColor": "#eaeaea" } ]
         },
         "(\\beval\\b)()()": {

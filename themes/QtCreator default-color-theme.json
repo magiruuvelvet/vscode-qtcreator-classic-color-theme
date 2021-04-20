@@ -1055,7 +1055,7 @@
             }
         },
         {
-            "name": "General: HEREDOC blocks",
+            "name": "General: HEREDOC block markers (begin, end)",
             "scope": [
                 "string.unquoted.heredoc.ruby punctuation.definition.string.begin.ruby",
                 "string.unquoted.heredoc.ruby punctuation.definition.string.end.ruby",
@@ -1064,6 +1064,19 @@
             "settings": {
                 "foreground": "#c82479",
                 "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "General: HEREDOC block content (everything inside the markers)",
+            "scope": [
+                "string.unquoted.heredoc.ruby"
+            ],
+            "settings": {
+                // unset color to correctly apply child syntax theme
+                // works specially awesome in Ruby HEREDOC's when using a language identifier as HEREDOC marker
+                // eg: <<-HTML, SQL, RUBY, etc.
+                "foreground": "#000000"
+                // preserve current fontStyle
             }
         },
         {
