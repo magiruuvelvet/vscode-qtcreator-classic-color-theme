@@ -196,6 +196,8 @@
                 "variable.language.this.js",
                 "variable.language.self.ruby",
                 "keyword.operator.new",
+                "keyword.operator.delete",
+                "keyword.operator.delete.array",
                 "keyword.operator.sizeof",
                 "keyword.operator.expression.of.js",
                 "keyword.operator.expression.in.js",
@@ -207,6 +209,16 @@
             ],
             "settings": {
                 "foreground": "#808000"
+            }
+        },
+        {
+            "name": "Keywords (reset)",
+            "scope": [
+                "keyword.operator.delete.array.bracket"
+            ],
+            "settings": {
+                "foreground": "#000000",
+                "fontStyle": ""
             }
         },
         {
@@ -426,6 +438,7 @@
                 "entity.name.class",
                 "entity.name.module",
                 "entity.name.type.struct.cpp",
+                "entity.name.type.union.cpp",
                 "entity.name.type.struct.c",
                 "entity.name.type.struct.d"
             ],
@@ -621,7 +634,9 @@
         },
         {
             "name": "Punctuation",
-            "scope": "punctuation",
+            "scope": [
+                "punctuation"
+            ],
             "settings": {
                 "foreground": "#000000"
             }
@@ -1310,6 +1325,17 @@
             }
         },
         {
+            "name": "C++: attributes",
+            "scope": [
+                "support.other.attribute.cpp entity.other.attribute",
+                "punctuation.section.attribute.begin.cpp",
+                "punctuation.section.attribute.end.cpp"
+            ],
+            "settings": {
+                "foreground": "#ce3102"
+            }
+        },
+        {
             "name": "Shell: builtin",
             "scope": [
                 "source.shell support.function.builtin.shell",
@@ -1547,6 +1573,9 @@
             "enumConstant": {
                 "foreground": "#8d268f"
             },
+            "concept": {
+                "foreground": "#ce3102"
+            },
             // "member": {
             //     "foreground": "#8d1b1b"
             // }
@@ -1561,6 +1590,9 @@
         },
         "enumConstant": {
             "foreground": "#8d268f"
+        },
+        "concept": {
+            "foreground": "#ce3102"
         },
         // "member": {
         //     "foreground": "#8d1b1b"

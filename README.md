@@ -298,6 +298,16 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "filterLanguageRegex": "^c$|^cpp$",
             "decorations": [ { "color": "#ce3102" }, {}, { "fontStyle": "italic" }, {}, { "color": "red", "fontStyle": "italic" } ]
         },
+        // C++: fix template<> highlighting at some places (meta.template.call.cpp)
+        "(?<!\\/\\/.*?)(\\btemplate\\b)([\\s\\<])": {
+            "filterLanguageRegex": "^cpp$",
+            "decorations": [ { "color": "#808000" }, {} ]
+        },
+        // C++: fix "typename=" highlighting
+        "(?<!\\/\\/.*?)(\\btypename\\b)([\\s\\=])": {
+            "filterLanguageRegex": "^cpp$",
+            "decorations": [ { "color": "#808000" }, {} ]
+        },
         // C++: thread_local storage
         "(\\bthread\\_local\\b)": {
             "filterLanguageRegex": "^cpp$",
