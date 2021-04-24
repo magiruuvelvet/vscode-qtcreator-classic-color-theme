@@ -203,6 +203,8 @@
                 "keyword.operator.expression.in.js",
                 "keyword.operator.expression.typeof.js",
                 "keyword.operator.typeid.cpp",
+                "keyword.operator.alignas.cpp",
+                "keyword.operator.alignof.cpp",
                 "#keyword.control.in.d", // typo in textmate grammar
                 "keyword.control.in.d",
                 "keyword.operator.identity.d"
@@ -254,6 +256,16 @@
             ],
             "settings": {
                 "foreground": "#808000"
+            }
+        },
+        {
+            "name": "Keywords: Debug and Assertions",
+            "scope": [
+                "keyword.other.static_assert.cpp"
+            ],
+            "settings": {
+                "foreground": "#ce3102",
+                "fontStyle": "bold"
             }
         },
         {
@@ -1573,12 +1585,18 @@
             "enumConstant": {
                 "foreground": "#8d268f"
             },
+            "enumMember": {
+                "foreground": "#8d268f"
+            },
             "concept": {
                 "foreground": "#ce3102"
             },
-            // "member": {
-            //     "foreground": "#8d1b1b"
-            // }
+            "property.classScope": {
+                "foreground": "#8d1b1b"
+            },
+            "method.classScope": {
+                "foreground": "#000000"
+            },
         }
     },
     "semanticTokenColors": {
@@ -1591,11 +1609,17 @@
         "enumConstant": {
             "foreground": "#8d268f"
         },
+        "enumMember": {
+            "foreground": "#8d268f"
+        },
         "concept": {
             "foreground": "#ce3102"
         },
-        // "member": {
-        //     "foreground": "#8d1b1b"
-        // }
+        "property.classScope": {
+            "foreground": "#8d1b1b"
+        },
+        "method.classScope": {
+            "foreground": "#000000"
+        },
     }
 }
