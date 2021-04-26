@@ -303,7 +303,7 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "filterLanguageRegex": "^cpp$",
             "decorations": [ { "color": "#808000" }, {} ]
         },
-        // C++: fix "typename=" highlighting
+        // C++: fix "typename=" highlighting at some places (meta.template.call.cpp)
         "(?<!\\/\\/.*?)(\\btypename\\b)([\\s\\=])": {
             "filterLanguageRegex": "^cpp$",
             "decorations": [ { "color": "#808000" }, {} ]
@@ -345,6 +345,12 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "regexFlags": "gms",
             "decorations": [ {}, { "backgroundColor": "#aaaaaa30", "isWholeLine": true }, {} ]
         },
+        // C/C++: #preprocessor highlihting patch with clangd
+        // "(^#.*)": {
+        //     "filterLanguageRegex": "^c$|^cpp$",
+        //     "regexFlags": "gm",
+        //     "decorations": [ { "color": "#000080" } ]
+        // },
         // D: highlight some common classes and aliases as types (purple)
         "(\\bsize_t\\b|\\bptrdiff_t\\b)": {
             "filterLanguageRegex": "^d$",

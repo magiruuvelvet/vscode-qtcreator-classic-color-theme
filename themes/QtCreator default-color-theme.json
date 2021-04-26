@@ -205,6 +205,7 @@
                 "keyword.operator.typeid.cpp",
                 "keyword.operator.alignas.cpp",
                 "keyword.operator.alignof.cpp",
+                "keyword.operator.override.cpp",
                 "#keyword.control.in.d", // typo in textmate grammar
                 "keyword.control.in.d",
                 "keyword.operator.identity.d"
@@ -1597,6 +1598,13 @@
             "method.classScope": {
                 "foreground": "#000000"
             },
+            "comment": {
+                "foreground": "#737373"
+            },
+            // custom clangd patch to replace "comment" with "inactiveCode" for disabled preprocessor paths
+            "inactiveCode": {
+                "foreground": "#d0d0d0"
+            },
         }
     },
     "semanticTokenColors": {
@@ -1620,6 +1628,13 @@
         },
         "method.classScope": {
             "foreground": "#000000"
+        },
+        "comment": {
+            "foreground": "#737373"
+        },
+        // custom clangd patch to replace "comment" with "inactiveCode" for disabled preprocessor paths
+        "inactiveCode": {
+            "foreground": "#d0d0d0"
         },
     }
 }
