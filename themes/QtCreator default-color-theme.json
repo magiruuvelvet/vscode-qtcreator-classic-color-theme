@@ -103,7 +103,8 @@
                 "storage.type.class.jsdoc",
                 "storage.type.class.jsdoc punctuation.definition.block.tag.jsdoc",
                 "comment.line.keyword.yard",
-                "comment.line.number-sign.ruby comment.line.keyword.punctuation.yard.ruby"
+                "comment.line.number-sign.ruby comment.line.keyword.punctuation.yard.ruby",
+                "keyword.other.documentation.javadoc.java"
             ],
             "settings": {
                 "foreground": "#0000ff"
@@ -194,6 +195,7 @@
                 "storage",
                 "variable.language.this.cpp",
                 "variable.language.this.js",
+                "variable.language.this.java",
                 "variable.language.self.ruby",
                 "keyword.operator.new",
                 "keyword.operator.delete",
@@ -218,7 +220,10 @@
         {
             "name": "Keywords (reset)",
             "scope": [
-                "keyword.operator.delete.array.bracket"
+                "keyword.operator.delete.array.bracket",
+                "storage.modifier.import.java",
+                "storage.modifier.package.java",
+                "keyword.control.ternary.java"
             ],
             "settings": {
                 "foreground": "#000000",
@@ -234,7 +239,8 @@
                 "constant.language.true",
                 "constant.language.false",
                 "constant.language.nil",
-                "constant.language.undefined"
+                "constant.language.undefined",
+                "constant.language.java"
             ],
             "settings": {
                 "foreground": "#808000"
@@ -1160,6 +1166,28 @@
             }
         },
         {
+            "name": "Annotations",
+            "scope": [
+                "storage.type.annotation.java",
+                "meta.declaration.annotation.java storage.type.annotation.java",
+                "meta.declaration.annotation.java punctuation.definition.annotation.java"
+            ],
+            "settings": {
+                "foreground": "#000000",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Annotations: Keys",
+            "scope": [
+                "meta.declaration.annotation.java constant.other.key.java"
+            ],
+            "settings": {
+                "foreground": "#000000",
+                "fontStyle": ""
+            }
+        },
+        {
             "name": "D: Module constructor",
             "scope": [
                 "entity.name.class.constructor.shared-static.d"
@@ -1597,42 +1625,13 @@
         { "name": "RainbowCSV: group  9", "scope": "text.csv rainbowgroup markup.bold.rainbow9",            "settings": { "foreground": "#4f0062", "fontStyle": "" } },
         { "name": "RainbowCSV: group 10", "scope": "text.csv rainbowgroup invalid.rainbow10",               "settings": { "foreground": "#365300", "fontStyle": "" } },
     ],
-    "editor.semanticTokenColorCustomizations": {
-        "rules": {
-            "namespace": {
-                "foreground": "#8d268f"
-            },
-            "enum": {
-                "foreground": "#8d268f"
-            },
-            "enumConstant": {
-                "foreground": "#8d268f"
-            },
-            "enumMember": {
-                "foreground": "#8d268f"
-            },
-            "concept": {
-                "foreground": "#ce3102"
-            },
-            "property.classScope": {
-                "foreground": "#8d1b1b"
-            },
-            "method.classScope": {
-                "foreground": "#000000"
-            },
-            "comment": {
-                "foreground": "#737373"
-            },
-            // custom clangd patch to replace "comment" with "inactiveCode" for disabled preprocessor paths
-            "inactiveCode": {
-                "foreground": "#d0d0d0"
-            },
-        }
-    },
     "semanticTokenColors": {
+        // namespaces
         "namespace": {
             "foreground": "#8d268f"
         },
+
+        // enumerators
         "enum": {
             "foreground": "#8d268f"
         },
@@ -1642,21 +1641,81 @@
         "enumMember": {
             "foreground": "#8d268f"
         },
+
+        // concepts
         "concept": {
             "foreground": "#ce3102"
         },
+
+        // OOP properties
         "property.classScope": {
             "foreground": "#8d1b1b"
         },
+        "property:java": {
+            "foreground": "#8d1b1b"
+        },
+
+        // OOP static member variables
+        "property.static": {
+            "foreground": "#8d1b1b",
+            "fontStyle": "bold",
+        },
+        "variable.static.classScope:cpp": {
+            "foreground": "#8d1b1b",
+            "fontStyle": "bold",
+        },
+
+        // OOP methods
         "method.classScope": {
             "foreground": "#000000"
         },
+        "method:java": {
+            "foreground": "#000000"
+        },
+
+        // comments
         "comment": {
             "foreground": "#737373"
         },
+
         // custom clangd patch to replace "comment" with "inactiveCode" for disabled preprocessor paths
         "inactiveCode": {
             "foreground": "#d0d0d0"
+        },
+
+        // java specific customizations
+        "annotationMember:java": {
+            "foreground": "#000000"
+        },
+        "importDeclaration:java": {
+            "foreground": "#000000",
+            "fontStyle": "",
+        },
+        "annotation.importDeclaration:java": {
+            "foreground": "#000000",
+            "fontStyle": "",
+        },
+        "namespace.importDeclaration:java": {
+            "foreground": "#000000",
+            "fontStyle": "",
+        },
+        "class.importDeclaration:java": {
+            "foreground": "#000000",
+            "fontStyle": "",
+        },
+        "enum.importDeclaration:java": {
+            "foreground": "#000000",
+            "fontStyle": "",
+        },
+        "interface.importDeclaration:java": {
+            "foreground": "#000000",
+            "fontStyle": "",
+        },
+
+        // documentation
+        "keyword.documentation": {
+            "foreground": "#0000ff",
+            "fontStyle": "",
         },
     }
 }
