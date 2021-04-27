@@ -202,6 +202,7 @@
                 "keyword.operator.expression.of.js",
                 "keyword.operator.expression.in.js",
                 "keyword.operator.expression.typeof.js",
+                "keyword.operator.expression.keyof.ts",
                 "keyword.operator.typeid.cpp",
                 "keyword.operator.alignas.cpp",
                 "keyword.operator.alignof.cpp",
@@ -1083,6 +1084,15 @@
             }
         },
         {
+            "name": "Ruby: Kernel functions",
+            "scope": [
+                "source.ruby support.function.kernel.ruby"
+            ],
+            "settings": {
+                "foreground": "#ce3102"
+            }
+        },
+        {
             "name": "General: HEREDOC block markers (begin, end)",
             "scope": [
                 "string.unquoted.heredoc.ruby punctuation.definition.string.begin.ruby",
@@ -1574,6 +1584,18 @@
         //         "fontStyle": "bold"
         //     }
         // },
+
+        // extension: mechatroner.rainbow-csv
+        { "name": "RainbowCSV: group  1", "scope": "text.csv rainbowgroup rainbow1",                        "settings": { "foreground": "#000000", "fontStyle": "" } },
+        { "name": "RainbowCSV: group  2", "scope": "text.csv rainbowgroup keyword.rainbow2",                "settings": { "foreground": "#687400", "fontStyle": "" } },
+        { "name": "RainbowCSV: group  3", "scope": "text.csv rainbowgroup entity.name.function.rainbow3",   "settings": { "foreground": "#920000", "fontStyle": "" } },
+        { "name": "RainbowCSV: group  4", "scope": "text.csv rainbowgroup comment.rainbow4",                "settings": { "foreground": "#005070", "fontStyle": "" } },
+        { "name": "RainbowCSV: group  5", "scope": "text.csv rainbowgroup string.rainbow5",                 "settings": { "foreground": "#616161", "fontStyle": "" } },
+        { "name": "RainbowCSV: group  6", "scope": "text.csv rainbowgroup variable.parameter.rainbow6",     "settings": { "foreground": "#006e3b", "fontStyle": "" } },
+        { "name": "RainbowCSV: group  7", "scope": "text.csv rainbowgroup constant.numeric.rainbow7",       "settings": { "foreground": "#990091", "fontStyle": "" } },
+        { "name": "RainbowCSV: group  8", "scope": "text.csv rainbowgroup entity.name.type.rainbow8",       "settings": { "foreground": "#974900", "fontStyle": "" } },
+        { "name": "RainbowCSV: group  9", "scope": "text.csv rainbowgroup markup.bold.rainbow9",            "settings": { "foreground": "#4f0062", "fontStyle": "" } },
+        { "name": "RainbowCSV: group 10", "scope": "text.csv rainbowgroup invalid.rainbow10",               "settings": { "foreground": "#365300", "fontStyle": "" } },
     ],
     "editor.semanticTokenColorCustomizations": {
         "rules": {
