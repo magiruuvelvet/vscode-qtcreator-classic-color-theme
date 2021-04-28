@@ -1018,9 +1018,16 @@
         },
         {
             "name": "Markup Quote",
-            "scope": "markup.quote",
+            "scope": [
+                "markup.quote",
+                "markup.quote punctuation.definition.quote",
+                "markup.quote markup.bold",
+                "markup.quote markup.italic",
+                "markup.quote punctuation.definition.bold",
+                "markup.quote punctuation.definition.italic"
+            ],
             "settings": {
-                "foreground": "#7A3E9D"
+                "foreground": "#0057ae"
             }
         },
         {
