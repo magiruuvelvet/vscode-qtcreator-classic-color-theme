@@ -241,6 +241,11 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "regexFlags": "gm",
             "decorations": [ {}, { "color": "#0057ae", "fontWeight": "bold" }, {}, {}, { "color": "#808000" } ]
         },
+        "(\\-[\\s]?)(#[ ]*?)(\\bfrozen\\_string\\_literal\\b)(\\:)([ ]*?)(\\btrue\\b|\\bfalse\\b)$": {
+            "filterLanguageRegex": "^slim\\-lang$|^slim$",
+            "regexFlags": "gm",
+            "decorations": [ {}, {}, { "color": "#0057ae", "fontWeight": "bold" }, {}, {}, { "color": "#808000" } ]
+        },
         // Ruby: class constructor
         "(\\bdef\\s)(initialize)([\\s\\(]|$)": {
             "filterLanguageRegex": "^ruby$",
