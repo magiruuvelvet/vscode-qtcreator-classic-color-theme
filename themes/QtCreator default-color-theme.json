@@ -112,7 +112,8 @@
                 "storage.type.class.jsdoc punctuation.definition.block.tag.jsdoc",
                 "comment.line.keyword.yard",
                 "comment.line.number-sign.ruby comment.line.keyword.punctuation.yard.ruby",
-                "keyword.other.documentation.javadoc.java"
+                "keyword.other.documentation.javadoc.java",
+                "keyword.other.phpdoc.php"
             ],
             "settings": {
                 "foreground": "#0000ff"
@@ -205,6 +206,8 @@
                 "variable.language.this.js",
                 "variable.language.this.java",
                 "variable.language.self.ruby",
+                "variable.language.this.php",
+                "variable.language.this.php punctuation.definition.variable.php",
                 "keyword.operator.new",
                 "keyword.operator.delete",
                 "keyword.operator.delete.array",
@@ -248,7 +251,8 @@
                 "constant.language.false",
                 "constant.language.nil",
                 "constant.language.undefined",
-                "constant.language.java"
+                "constant.language.java",
+                "constant.language.php"
             ],
             "settings": {
                 "foreground": "#808000"
@@ -493,6 +497,13 @@
             }
         },
         {
+            "name": "Classes: constructor (PHP)",
+            "scope": "source.php support.function.constructor",
+            "settings": {
+                "foreground": "#0057ae"
+            }
+        },
+        {
             "name": "Classes: destructor",
             "scope": [
                 "entity.name.function.destructor",
@@ -548,7 +559,8 @@
                 "variable.other.readwrite.instance.ruby",
                 "variable.other.readwrite.instance.ruby punctuation.definition.variable.ruby",
                 "variable.other.readwrite.class.ruby",
-                "variable.other.readwrite.class.ruby punctuation.definition.variable.ruby"
+                "variable.other.readwrite.class.ruby punctuation.definition.variable.ruby",
+                "source.php meta.class variable.other.property.php"
             ],
             "settings": {
                 "foreground": "#8d1b1b"
@@ -1627,6 +1639,46 @@
         //         "fontStyle": "bold"
         //     }
         // },
+        {
+            "name": "PHP: imports and namespaces",
+            "scope": [
+                "source.php meta.use.php support.other.namespace",
+                "source.php meta.use.php support.class",
+                "source.php meta.use.php entity.other.alias",
+                "source.php meta.namespace.php entity.name.type.namespace"
+            ],
+            "settings": {
+                "foreground": "#000000"
+            }
+        },
+        {
+            "name": "PHP: class constants",
+            "scope": [
+                "source.php meta.class constant.other",
+                "source.php meta.class support.constant"
+            ],
+            "settings": {
+                "foreground": "#8d1b1b",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "PHP: documentation data types",
+            "scope": [
+                "source.php meta.other.type.phpdoc.php support.other.namespace",
+                "source.php meta.other.type.phpdoc.php support.class"
+            ],
+            "settings": {
+                "foreground": "#000000"
+            }
+        },
+        {
+            "name": "PHP: magic methods",
+            "scope": "source.php meta.class support.function.magic.php",
+            "settings": {
+                "foreground": "#0057ae"
+            }
+        },
 
         // extension: mechatroner.rainbow-csv
         { "name": "RainbowCSV: group  1", "scope": "text.csv rainbowgroup rainbow1",                        "settings": { "foreground": "#000000", "fontStyle": "" } },
@@ -1655,6 +1707,11 @@
         },
         "enumMember": {
             "foreground": "#8d268f"
+        },
+
+        // function parameters
+        "parameter.functionScope": {
+            "foreground": "#111111"
         },
 
         // concepts
