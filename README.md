@@ -80,6 +80,11 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         "( | )": { // U+00A0, U+202F
             "decorations": [ { "backgroundColor": "#eeeeee20", "border": "1px solid #44444470" } ]
         },
+        // improve merge conflict highlighting
+        "(^<<<<<<<|^>>>>>>>|^=======)(.*)": { "regexFlags": "gm", "decorations": [ { "fontWeight": "bold" }, { "color": "#545454" } ] },
+        "(^<<<<<<<)(.*)":                   { "regexFlags": "gm", "decorations": [ { "backgroundColor": "#a5d6c9", "isWholeLine": true } ] },
+        "(^>>>>>>>)(.*)":                   { "regexFlags": "gm", "decorations": [ { "backgroundColor": "#9fd2ff", "isWholeLine": true } ] },
+        "(^=======)(.*)":                   { "regexFlags": "gm", "decorations": [ { "backgroundColor": "#b6b6b640", "isWholeLine": true } ] },
 
         // D: make D class destructor italic, syntax highlighting doesn't match it as destructor
         "(?<!static )(\\~this)\\(\\)": {

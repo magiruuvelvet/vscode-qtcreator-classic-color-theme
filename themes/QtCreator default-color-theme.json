@@ -20,7 +20,7 @@
         "editorGroupHeader.tabsBorder": "#404142",
         "editorGroup.dropBackground": "#40414210",
         "editorLineNumber.foreground": "#AAAAAA",
-        "editorLineNumber.background": "#efebe7",
+        "editorLineNumber.background": "#f7f7f7",
         "editorLineNumber.activeForeground": "#454749",
         "editorGutter.background": "#f7f7f7",
         "editorGutter.modifiedBackground": "#fdbc4b",
@@ -64,7 +64,15 @@
         "dropdown.border": "#0c66ee",
         "dropdown.background": "#ffffff",
         "dropdown.foreground": "#000000",
-        "progressBar.background": "#0c66ee"
+        "progressBar.background": "#0c66ee",
+        "editorOverviewRuler.findMatchForeground": "#ffe600",
+        "editorOverviewRuler.rangeHighlightForeground": "#b3b3b3",
+        "editorOverviewRuler.selectionHighlightForeground": "#b3b3b3",
+        "merge.currentHeaderBackground": "#a5d6c9",
+        "merge.currentContentBackground": "#dbefe9",
+        "merge.incomingHeaderBackground": "#9fd2ff",
+        "merge.incomingContentBackground": "#d9edff",
+        "merge.border": "#282828",
     },
     "tokenColors": [
         {
