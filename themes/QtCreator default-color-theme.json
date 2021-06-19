@@ -35,7 +35,8 @@
         "editor.findMatchBackground": "#d8d8d8",
         "editor.findMatchHighlightBackground": "#ffe600af",
         "editor.findRangeHighlightBackground": "#88888841",
-        "editor.lineHighlightBorder": "#ececec",
+        "editor.lineHighlightBorder": "#ffffff00",
+        "editor.lineHighlightBackground": "#f8f7f680",
         "editor.foldBackground": "#0c66ee25",
         "editor.wordHighlightBackground": "#f1f1f1",
         "editor.wordHighlightStrongBackground": "#ebebeb",
@@ -330,7 +331,9 @@
                 "entity.name.type.c",
                 "entity.name.type.enum.cpp",
                 "entity.name.type.enum.d",
-                "variable.other.enummember.cpp"
+                "variable.other.enummember.cpp",
+                "entity.name.type.enum.java",
+                "constant.other.enum.java"
             ],
             "settings": {
                 "foreground": "#8d268f"
@@ -1677,6 +1680,13 @@
             "scope": "source.php meta.class support.function.magic.php",
             "settings": {
                 "foreground": "#0057ae"
+            }
+        },
+        {
+            "name": "GraphQL: Parameters",
+            "scope": "variable.parameter.graphql",
+            "settings": {
+                "foreground": "#AB6526"
             }
         },
 
