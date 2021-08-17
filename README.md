@@ -269,7 +269,7 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ {}, { "color": "#0057ae", "fontWeight": "bold" }, {} ]
         },
         // Ruby: special keywords and functions
-        "(\\bprivate\\_class\\_method\\b|\\bclass\\_eval\\b|\\bmodule\\_eval\\b)": {
+        "(\\bprivate\\_class\\_method\\b|\\bprivate\\_constant\\b|\\bclass\\_eval\\b|\\bmodule\\_eval\\b)": {
             "filterLanguageRegex": "^ruby$",
             "decorations": [ { "color": "#0057ae", "fontWeight": "bold" } ]
         },

@@ -217,6 +217,7 @@
                 "keyword.operator.expression.in.js",
                 "keyword.operator.expression.typeof.js",
                 "keyword.operator.expression.keyof.ts",
+                "keyword.operator.expression.delete.js",
                 "keyword.operator.typeid.cpp",
                 "keyword.operator.alignas.cpp",
                 "keyword.operator.alignof.cpp",
@@ -1687,6 +1688,13 @@
             "scope": "variable.parameter.graphql",
             "settings": {
                 "foreground": "#AB6526"
+            }
+        },
+        {
+            "name": "ObjectPascal: variable.other",
+            "scope": "source.objectpascal variable.other",
+            "settings": {
+                "foreground": "#808000"
             }
         },
 
