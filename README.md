@@ -355,7 +355,7 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "regexFlags": "gms",
             "decorations": [ {}, { "backgroundColor": "#aaaaaa30", "isWholeLine": true }, {} ]
         },
-        // C/C++: #preprocessor highlihting patch with clangd
+        // C/C++: #preprocessor highlighting patch with clangd
         // "(^#.*)": {
         //     "filterLanguageRegex": "^c$|^cpp$",
         //     "regexFlags": "gm",
@@ -479,7 +479,7 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         "(\\beval\\b)()()": {
             "filterLanguageRegex": "^ruby$|^javascript$|^typescript$",
             "decorations": [ { "backgroundColor": "#eaeaea", "isWholeLine": true } ]
-        }
+        },
     }
 }
 ```

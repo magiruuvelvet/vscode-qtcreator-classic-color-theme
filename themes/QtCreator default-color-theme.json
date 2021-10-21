@@ -5,9 +5,9 @@
     "colors": {
         "focusBorder": "#00000000",
         "foreground": "#000000",
-        "editor.background": "#ffffff",
+        "editor.background": "#fbfbfb", // "#ffffff",
         "editor.foreground": "#000000",
-        "sideBar.background": "#ffffff",
+        "sideBar.background": "#fbfbfb", // "#ffffff",
         "sideBar.foreground": "#000000",
         "sideBar.border": "#404142",
         "activityBar.background": "#404142",
@@ -58,14 +58,14 @@
         "statusBar.debuggingBackground": "#404142",
         "statusBar.debuggingForeground": "#ffffff",
         "editorSuggestWidget.foreground": "#000000",
-        "input.border": "#0c66ee",
+        "input.border": "#737373", // "#0c66ee",
         "input.background": "#ffffff",
         "input.foreground": "#000000",
-        "inputOption.activeBorder": "#0c66ee",
-        "dropdown.border": "#0c66ee",
+        "inputOption.activeBorder": "#737373", // "#0c66ee",
+        "dropdown.border": "#737373", // "#0c66ee",
         "dropdown.background": "#ffffff",
         "dropdown.foreground": "#000000",
-        "progressBar.background": "#0c66ee",
+        "progressBar.background": "#737373", // "#0c66ee",
         "editorOverviewRuler.findMatchForeground": "#ffe600",
         "editorOverviewRuler.rangeHighlightForeground": "#b3b3b3",
         "editorOverviewRuler.selectionHighlightForeground": "#b3b3b3",
@@ -74,6 +74,13 @@
         "merge.incomingHeaderBackground": "#9fd2ff",
         "merge.incomingContentBackground": "#d9edff",
         "merge.border": "#282828",
+        "button.background": "#808080",
+        "button.foreground": "#ffffff",
+        "button.border": "#808080",
+        "button.hoverBackground": "#737373",
+        "button.secondaryBackground": "#808080",
+        "button.secondaryForeground": "#ffffff",
+        "button.secondaryHoverBackground": "#737373",
     },
     "tokenColors": [
         {
@@ -149,7 +156,7 @@
                 "keyword.operator.cast"
             ],
             "settings": {
-                "foreground": "#808000"
+                "foreground": "#7a7a00" // "#808000"
             }
         },
         {
@@ -227,7 +234,7 @@
                 "keyword.operator.identity.d"
             ],
             "settings": {
-                "foreground": "#808000"
+                "foreground": "#7a7a00" // "#808000"
             }
         },
         {
@@ -257,7 +264,7 @@
                 "constant.language.php"
             ],
             "settings": {
-                "foreground": "#808000"
+                "foreground": "#7a7a00" // "#808000"
             }
         },
         {
@@ -277,7 +284,7 @@
                 "comment.line.type.yard"
             ],
             "settings": {
-                "foreground": "#808000"
+                "foreground": "#7a7a00" // "#808000"
             }
         },
         {
@@ -307,7 +314,7 @@
                 "support.type.primitive.ts"
             ],
             "settings": {
-                "foreground": "#808000"
+                "foreground": "#7a7a00" // "#808000"
             }
         },
         {
@@ -316,7 +323,7 @@
                 "storage.type.built-in.primitive"
             ],
             "settings": {
-                "foreground": "#808000"
+                "foreground": "#7a7a00" // "#808000"
             }
         },
         {
@@ -522,7 +529,7 @@
             "name": "Classes: virtual",
             "scope": "storage.modifier.specifier.functional.pre-parameters.virtual.cpp",
             "settings": {
-                "foreground": "#808000",
+                "foreground": "#7a7a00", // "#808000"
                 "fontStyle": "italic"
             }
         },
@@ -625,7 +632,7 @@
             "name": "CMake: entities (whatever that means)",
             "scope": "entity.source.cmake",
             "settings": {
-                "foreground": "#808000"
+                "foreground": "#7a7a00" // "#808000"
             }
         },
         {
@@ -909,7 +916,7 @@
                 "keyword.operator.logical.scss"
             ],
             "settings": {
-                "foreground": "#808000"
+                "foreground": "#7a7a00" // "#808000"
             }
         },
         {
@@ -1383,7 +1390,7 @@
                 "text.html.markdown markup.fenced_code.block.markdown punctuation.definition.markdown"
             ],
             "settings": {
-                "foreground": "#808000",
+                "foreground": "#7a7a00", // "#808000"
                 "fontStyle": ""
             }
         },
@@ -1517,7 +1524,7 @@
             "name": "HTTP: Request Method",
             "scope": "source.http http.requestline keyword.control.http",
             "settings": {
-                "foreground": "#808000",
+                "foreground": "#7a7a00", // "#808000"
                 "fontStyle": "bold"
             }
         },
@@ -1694,7 +1701,7 @@
             "name": "ObjectPascal: variable.other",
             "scope": "source.objectpascal variable.other",
             "settings": {
-                "foreground": "#808000"
+                "foreground": "#7a7a00" // "#808000"
             }
         },
 
