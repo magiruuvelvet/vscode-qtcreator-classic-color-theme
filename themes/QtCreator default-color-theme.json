@@ -234,6 +234,7 @@
                 "keyword.operator.alignas.cpp",
                 "keyword.operator.alignof.cpp",
                 "keyword.operator.override.cpp",
+                "keyword.operator.type.php",
                 "#keyword.control.in.d", // typo in textmate grammar
                 "keyword.control.in.d",
                 "keyword.operator.identity.d"
@@ -553,7 +554,8 @@
                 "entity.name.type.class",
                 "entity.name.type.module",
                 "entity.name.type.interface",
-                "entity.other.inherited-class"
+                "entity.other.inherited-class",
+                "entity.name.type.trait.php",
             ],
             "settings": {
                 "foreground": "#8d268f"
@@ -1696,8 +1698,14 @@
             }
         },
         {
-            "name": "PHP: Support Functions",
-            "scope": "source.php support.function.var.php",
+            "name": "PHP: Support Functions (built-in, modules)",
+            "scope": [
+                "source.php support.function.var.php",
+                "source.php support.function.construct.php",
+                "source.php support.function.php_pcre.php",
+                "source.php support.function.array.php",
+                "source.php support.function.string.php",
+            ],
             "settings": {
                 "foreground": "#0057ae"
             }
