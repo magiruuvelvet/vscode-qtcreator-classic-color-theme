@@ -439,12 +439,12 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         "(^\\+[^+])(.*)": {
             "filterLanguageRegex": "^diff$",
             "regexFlags": "gm",
-            "decorations": [ {}, { "backgroundColor": "#006e2808", "isWholeLine": true } ]
+            "decorations": [ {}, { "backgroundColor": /*"#006e2808"*/"#6cd8ff40", "isWholeLine": true } ]
         },
         "(^\\-[^-])(.*)": {
             "filterLanguageRegex": "^diff$",
             "regexFlags": "gm",
-            "decorations": [ {}, { "backgroundColor": "#bf030308", "isWholeLine": true } ]
+            "decorations": [ {}, { "backgroundColor": /*"#bf030308"*/"#fbfe3760", "isWholeLine": true } ]
         },
         // Slim: code line
         "(^[ ]*?)([-=])([^-=])(.*?$)": {
@@ -479,6 +479,11 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         "(\\beval\\b)()()": {
             "filterLanguageRegex": "^ruby$|^javascript$|^typescript$",
             "decorations": [ { "backgroundColor": "#eaeaea", "isWholeLine": true } ]
+        },
+        // JavaScript: "use scrict";
+        "(\\\"use strict\\\"|\\'use strict\\')": {
+            "filterLanguageRegex": "^javascript$",
+            "decorations": [ { "color": "#ce3102", "fontWeight": "bold", "fontStyle": "italic" } ]
         },
     }
 }

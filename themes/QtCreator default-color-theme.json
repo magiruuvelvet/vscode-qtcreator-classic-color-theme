@@ -216,6 +216,7 @@
                 "storage",
                 "variable.language.this.cpp",
                 "variable.language.this.js",
+                "variable.language.this.ts",
                 "variable.language.this.java",
                 "variable.language.self.ruby",
                 "variable.language.this.php",
@@ -237,7 +238,9 @@
                 "keyword.operator.type.php",
                 "#keyword.control.in.d", // typo in textmate grammar
                 "keyword.control.in.d",
-                "keyword.operator.identity.d"
+                "keyword.operator.identity.d",
+                ">storage.modifier.java", // typo in textmate grammar
+                "keyword.operator.instanceof.java"
             ],
             "settings": {
                 "foreground": "#7a7a00" // "#808000"
@@ -767,6 +770,17 @@
             }
         },
         {
+            "name": "HTML: Custom Tags",
+            "scope": [
+                //"text.html.derivative meta.tag.custom",
+                "text.html.derivative meta.tag.custom entity.name.tag"
+            ],
+            "settings": {
+                "foreground": "#4d4d4d",
+                "fontStyle": "bold italic"
+            }
+        },
+        {
             "name": "CSS: Selectors",
             "scope": [
                 "meta.selector",
@@ -1208,6 +1222,17 @@
             ],
             "settings": {
                 "foreground": "#8d268f"
+            }
+        },
+        {
+            "name": "TypeScript: decorators",
+            "scope": [
+                "meta.decorator.ts punctuation.decorator.ts",
+                "meta.decorator.ts entity.name.function.ts",
+            ],
+            "settings": {
+                "foreground": "#000000",
+                "fontStyle": "bold"
             }
         },
         {
@@ -1736,6 +1761,17 @@
         { "name": "RainbowCSV: group  8", "scope": "text.csv rainbowgroup entity.name.type.rainbow8",       "settings": { "foreground": "#974900", "fontStyle": "" } },
         { "name": "RainbowCSV: group  9", "scope": "text.csv rainbowgroup markup.bold.rainbow9",            "settings": { "foreground": "#4f0062", "fontStyle": "" } },
         { "name": "RainbowCSV: group 10", "scope": "text.csv rainbowgroup invalid.rainbow10",               "settings": { "foreground": "#365300", "fontStyle": "" } },
+
+        { "name": "RainbowCSV: group  1", "scope": "text.scsv rainbowgroup rainbow1",                        "settings": { "foreground": "#000000", "fontStyle": "" } },
+        { "name": "RainbowCSV: group  2", "scope": "text.scsv rainbowgroup keyword.rainbow2",                "settings": { "foreground": "#687400", "fontStyle": "" } },
+        { "name": "RainbowCSV: group  3", "scope": "text.scsv rainbowgroup entity.name.function.rainbow3",   "settings": { "foreground": "#920000", "fontStyle": "" } },
+        { "name": "RainbowCSV: group  4", "scope": "text.scsv rainbowgroup comment.rainbow4",                "settings": { "foreground": "#005070", "fontStyle": "" } },
+        { "name": "RainbowCSV: group  5", "scope": "text.scsv rainbowgroup string.rainbow5",                 "settings": { "foreground": "#616161", "fontStyle": "" } },
+        { "name": "RainbowCSV: group  6", "scope": "text.scsv rainbowgroup variable.parameter.rainbow6",     "settings": { "foreground": "#006e3b", "fontStyle": "" } },
+        { "name": "RainbowCSV: group  7", "scope": "text.scsv rainbowgroup constant.numeric.rainbow7",       "settings": { "foreground": "#990091", "fontStyle": "" } },
+        { "name": "RainbowCSV: group  8", "scope": "text.scsv rainbowgroup entity.name.type.rainbow8",       "settings": { "foreground": "#974900", "fontStyle": "" } },
+        { "name": "RainbowCSV: group  9", "scope": "text.scsv rainbowgroup markup.bold.rainbow9",            "settings": { "foreground": "#4f0062", "fontStyle": "" } },
+        { "name": "RainbowCSV: group 10", "scope": "text.scsv rainbowgroup invalid.rainbow10",               "settings": { "foreground": "#365300", "fontStyle": "" } },
     ],
     "semanticTokenColors": {
         // namespaces
