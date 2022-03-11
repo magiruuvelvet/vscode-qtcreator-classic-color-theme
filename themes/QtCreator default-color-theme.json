@@ -240,7 +240,9 @@
                 "keyword.control.in.d",
                 "keyword.operator.identity.d",
                 ">storage.modifier.java", // typo in textmate grammar
-                "keyword.operator.instanceof.java"
+                "keyword.operator.instanceof.java",
+                "variable.language.special.self.python",
+                "variable.parameter.function.language.special.self.python",
             ],
             "settings": {
                 "foreground": "#7a7a00" // "#808000"
@@ -1749,6 +1751,24 @@
                 "foreground": "#7a7a00" // "#808000"
             }
         },
+        {
+            "name": "Python: Decorators",
+            "scope": [
+                "meta.function.decorator.python",
+                "meta.function.decorator.python support.type.python",
+            ],
+            "settings": {
+                "foreground": "#000000",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Python: built-in functions",
+            "scope": "source.python support.function.builtin",
+            "settings": {
+                "foreground": "#0057ae",
+            }
+        },
 
         // extension: mechatroner.rainbow-csv
         { "name": "RainbowCSV: group  1", "scope": "text.csv rainbowgroup rainbow1",                        "settings": { "foreground": "#000000", "fontStyle": "" } },
@@ -1863,6 +1883,11 @@
         "interface.importDeclaration:java": {
             "foreground": "#000000",
             "fontStyle": "",
+        },
+
+        // abstract classes
+        "class.abstract": {
+            "fontStyle": "italic",
         },
 
         // documentation
