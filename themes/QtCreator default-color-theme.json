@@ -122,6 +122,7 @@
                 "storage.type.class.doxygen",
                 "storage.type.class.jsdoc",
                 "storage.type.class.jsdoc punctuation.definition.block.tag.jsdoc",
+                "storage.type.class.jsdoc punctuation.definition.inline.tag.jsdoc",
                 "comment.line.keyword.yard",
                 "comment.line.number-sign.ruby comment.line.keyword.punctuation.yard.ruby",
                 "keyword.other.documentation.javadoc.java",
@@ -1862,6 +1863,10 @@
             "foreground": "#8d1b1b",
             "fontStyle": "bold",
         },
+        "property.static.private": {
+            "foreground": "#8d1b1b80",
+            "fontStyle": "bold",
+        },
         "variable.static.classScope:cpp": {
             "foreground": "#8d1b1b",
             "fontStyle": "bold",
@@ -1874,6 +1879,17 @@
         "method:java": {
             "foreground": "#000000"
         },
+        "method.private": {
+            "foreground": "#000000d8"
+        },
+
+        // readonly variables
+        // "variable.readonly": {
+        //     "foreground": "#005a83",
+        // },
+        // "parameter.readonly": {
+        //     "foreground": "#005a83",
+        // },
 
         // comments
         "comment": {
