@@ -348,6 +348,7 @@
                 "support.type.built-in.posix-reserved",
                 "constant.language.symbol.hashkey.ruby",
                 "variable.other.constant.ruby",
+                "variable.other.constant.js",
                 "entity.name.type.ts",
                 "entity.name.type.js",
                 "entity.name.type.cpp",
@@ -1248,6 +1249,7 @@
             "name": "Annotations",
             "scope": [
                 "storage.type.annotation.java",
+                "storage.type.annotation.dart",
                 "meta.declaration.annotation.java storage.type.annotation.java",
                 "meta.declaration.annotation.java punctuation.definition.annotation.java"
             ],
@@ -1850,6 +1852,11 @@
             "foreground": "#ce3102"
         },
 
+        // labels
+        "label": {
+            "foreground": "#ce3102"
+        },
+
         // OOP properties
         "property.classScope": {
             "foreground": "#8d1b1b"
@@ -1899,6 +1906,11 @@
         // custom clangd patch to replace "comment" with "inactiveCode" for disabled preprocessor paths
         "inactiveCode": {
             "foreground": "#d0d0d0"
+        },
+
+        // dart specific customizations
+        "class.annotation:dart": {
+            "foreground": "#000000"
         },
 
         // java specific customizations
