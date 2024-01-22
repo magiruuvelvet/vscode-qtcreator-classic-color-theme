@@ -227,11 +227,16 @@
                 "keyword.operator.delete.array",
                 "keyword.operator.sizeof",
                 "keyword.operator.expression.of.js",
+                "keyword.operator.expression.of.ts",
                 "keyword.operator.expression.in.js",
+                "keyword.operator.expression.in.ts",
                 "keyword.operator.expression.typeof.js",
+                "keyword.operator.expression.typeof.ts",
                 "keyword.operator.expression.keyof.ts",
                 "keyword.operator.expression.delete.js",
+                "keyword.operator.expression.delete.ts",
                 "keyword.operator.expression.instanceof.js",
+                "keyword.operator.expression.instanceof.ts",
                 "keyword.operator.typeid.cpp",
                 "keyword.operator.alignas.cpp",
                 "keyword.operator.alignof.cpp",
@@ -348,7 +353,6 @@
                 "support.type.built-in.posix-reserved",
                 "constant.language.symbol.hashkey.ruby",
                 "variable.other.constant.ruby",
-                "variable.other.constant.js",
                 "entity.name.type.ts",
                 "entity.name.type.js",
                 "entity.name.type.cpp",
@@ -783,7 +787,10 @@
             "name": "HTML: Custom Tags",
             "scope": [
                 //"text.html.derivative meta.tag.custom",
-                "text.html.derivative meta.tag.custom entity.name.tag"
+                "text.html.derivative meta.tag.custom entity.name.tag",
+                "text.html.basic meta.tag.custom.start.html entity.name.tag.html",
+                "text.html.basic meta.tag.custom.end.html entity.name.tag.html",
+                "source.css.scss entity.name.tag.custom.scss",
             ],
             "settings": {
                 "foreground": "#4d4d4d",
@@ -1232,6 +1239,19 @@
             ],
             "settings": {
                 "foreground": "#8d268f"
+            }
+        },
+        {
+            "name": "JavaScript: constant variables",
+            "scope": [
+                "variable.other.constant.js",
+                "variable.other.constant.js entity.name.function.js",
+                "variable.other.constant.object.js",
+                "variable.other.constant.property.js",
+            ],
+            "settings": {
+                "foreground": "#80280d",
+                "fontStyle": "",
             }
         },
         {
