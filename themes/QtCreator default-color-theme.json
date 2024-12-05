@@ -223,7 +223,9 @@
                 "variable.language.this.php",
                 "variable.language.this.php punctuation.definition.variable.php",
                 "keyword.operator.new",
+                "keyword.operator.new.cpp",
                 "keyword.operator.delete",
+                "keyword.operator.delete.cpp",
                 "keyword.operator.delete.array",
                 "keyword.operator.sizeof",
                 "keyword.operator.expression.of.js",
@@ -507,6 +509,16 @@
             ],
             "settings": {
                 "foreground": "#8d268f"
+            }
+        },
+        {
+            "name": "Classes: abstract (per language)",
+            "scope": [
+                "entity.name.interface.objectpascal",
+            ],
+            "settings": {
+                "foreground": "#8d268f",
+                "fontStyle": "italic"
             }
         },
         {
@@ -1783,11 +1795,38 @@
                 "foreground": "#985922" // "#AB6526"
             }
         },
+        // {
+        //     "name": "ObjectPascal: variable.other",
+        //     "scope": "source.objectpascal variable.other",
+        //     "settings": {
+        //         "foreground": "#7a7a00" // "#808000"
+        //     }
+        // },
         {
-            "name": "ObjectPascal: variable.other",
-            "scope": "source.objectpascal variable.other",
+            "name": "ObjectPascal: Variables and default text color highlighting",
+            "scope": [
+                "source.objectpascal variable.other",
+                "source.objectpascal meta.uses string.unquoted",
+            ],
             "settings": {
-                "foreground": "#7a7a00" // "#808000"
+                "foreground": "#000000"
+            }
+        },
+        {
+            "name": "ObjectPascal: Types",
+            "scope": "source.objectpascal entity.name.type",
+            "settings": {
+                "foreground": "#7a7a00"
+            }
+        },
+        {
+            "name": "ObjectPascal: Extended Types",
+            "scope": [
+                "source.objectpascal meta.type.alias entity.name.type",
+                "source.objectpascal meta.parameterlist entity.name.type",
+            ],
+            "settings": {
+                "foreground": "#8d268f"
             }
         },
         {
@@ -1875,6 +1914,11 @@
         // labels
         "label": {
             "foreground": "#ce3102"
+        },
+
+        // OOP
+        "class.public.constructor:java": {
+            "foreground": "#8d268f"
         },
 
         // OOP properties
