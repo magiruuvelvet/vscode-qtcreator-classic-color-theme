@@ -222,6 +222,8 @@
                 "variable.language.self.ruby",
                 "variable.language.this.php",
                 "variable.language.this.php punctuation.definition.variable.php",
+                "variable.language.super.js",
+                "variable.language.super.ts",
                 "keyword.operator.new",
                 "keyword.operator.new.cpp",
                 "keyword.operator.delete",
@@ -252,6 +254,7 @@
                 "variable.language.special.self.python",
                 "variable.parameter.function.language.special.self.python",
                 "keyword.operator.logical.python",
+                "keyword.operator.logical.php",
             ],
             "settings": {
                 "foreground": "#7a7a00" // "#808000"
@@ -505,7 +508,8 @@
                 "entity.name.type.struct.cpp",
                 "entity.name.type.union.cpp",
                 "entity.name.type.struct.c",
-                "entity.name.type.struct.d"
+                "entity.name.type.struct.d",
+                "entity.name.type.go"
             ],
             "settings": {
                 "foreground": "#8d268f"
@@ -633,7 +637,8 @@
                 "keyword.other.unit.suffix.integer.cpp",
                 "keyword.other.unit.hexadecimal.cpp",
                 "keyword.other.unit.suffix.integer.c",
-                "keyword.other.unit.hexadecimal.c"
+                "keyword.other.unit.hexadecimal.c",
+                "keyword.other.unit.hexadecimal.go",
             ],
             "settings": {
                 "foreground": "#000080"
@@ -717,6 +722,13 @@
             "scope": "constant.other.symbol",
             "settings": {
                 "foreground": "#985922" // "#AB6526"
+            }
+        },
+        {
+            "name": "Strings: Go backticks",
+            "scope": "string.quoted.raw.go",
+            "settings": {
+                "foreground": "#0057ae"
             }
         },
         {
@@ -1663,7 +1675,7 @@
                 "source.diff markup.inserted punctuation"
             ],
             "settings": {
-                "foreground": "#1497ac", // "#006e28",
+                "foreground": "#006e28", // "#1497ac",
                 "fontStyle": "bold"
             }
         },
@@ -1682,7 +1694,7 @@
                 "source.diff markup.deleted punctuation"
             ],
             "settings": {
-                "foreground": "#a19700", // "#bf0303",
+                "foreground": "#bf0303", // "#a19700",
                 "fontStyle": "bold"
             }
         },

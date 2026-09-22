@@ -86,6 +86,61 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         "(^>>>>>>>)(.*)":                   { "regexFlags": "gm", "decorations": [ { "backgroundColor": "#9fd2ff", "isWholeLine": true } ] },
         "(^=======)(.*)":                   { "regexFlags": "gm", "decorations": [ { "backgroundColor": "#b6b6b640", "isWholeLine": true } ] },
 
+        // TODO: this is a todo message
+        "(\\bTODO\\b)(\\(.*?\\))?(:?)(.*)": {
+            "regexFlags": "gm", // whole line case-sensitive matching
+            "decorations": [
+                { "color": "#7a5816", "backgroundColor": "#ffbd2a30", "fontWeight": "bold" },  // label
+                { "color": "#000000", "backgroundColor": "#ffbd2a30", "fontStyle": "italic" }, // tag
+                { "color": "#000000", "backgroundColor": "#ffbd2a30" },                        // :
+                { "color": "#000000", "backgroundColor": "#ffbd2a30" },                        // description
+            ],
+        },
+        // NOTE: this is a note message
+        "(\\bNOTE\\b)(\\(.*?\\))?(:?)(.*)": {
+            "regexFlags": "gm", // whole line case-sensitive matching
+            "decorations": [
+                { "color": "#146300", "backgroundColor": "#1e8a0020", "fontWeight": "bold" },  // label
+                { "color": "#000000", "backgroundColor": "#1e8a0020", "fontStyle": "italic" }, // tag
+                { "color": "#000000", "backgroundColor": "#1e8a0020" },                        // :
+                { "color": "#000000", "backgroundColor": "#1e8a0020" },                        // description
+            ],
+        },
+        // FIXME: this is a fixme message
+        "(\\bFIXME\\b)(\\(.*?\\))?(:?)(.*)": {
+            "regexFlags": "gm", // whole line case-sensitive matching
+            "decorations": [
+                { "color": "#8c2a4b", "backgroundColor": "#8c395622", "fontWeight": "bold" },  // label
+                { "color": "#000000", "backgroundColor": "#8c395622", "fontStyle": "italic" }, // tag
+                { "color": "#000000", "backgroundColor": "#8c395622" },                        // :
+                { "color": "#000000", "backgroundColor": "#8c395622" },                        // description
+            ],
+        },
+        // HACK: this is a hack message
+        "(\\bHACK\\b)(\\(.*?\\))?(:?)(.*)": {
+            "regexFlags": "gm", // whole line case-sensitive matching
+            "decorations": [
+                // { "color": "#a10002", "backgroundColor": "#a1000218", "fontWeight": "bold" },  // label
+                // { "color": "#000000", "backgroundColor": "#a1000218", "fontStyle": "italic" }, // tag
+                // { "color": "#000000", "backgroundColor": "#a1000218" },                        // :
+                // { "color": "#000000", "backgroundColor": "#a1000218" },                        // description
+                { "color": "#940003", "backgroundColor": "#c3000318", "fontWeight": "bold" },  // label
+                { "color": "#000000", "backgroundColor": "#c3000318", "fontStyle": "italic" }, // tag
+                { "color": "#000000", "backgroundColor": "#c3000318" },                        // :
+                { "color": "#000000", "backgroundColor": "#c3000318" },                        // description
+            ],
+        },
+        // ATTENTION: this is an attention message
+        "(\\bATTENTION\\b)(\\(.*?\\))?(:?)(.*)": {
+            "regexFlags": "gm", // whole line case-sensitive matching
+            "decorations": [
+                { "color": "#da0000", "backgroundColor": "#ff000010", "fontWeight": "bold" },  // label
+                { "color": "#000000", "backgroundColor": "#ff000010", "fontStyle": "italic" }, // tag
+                { "color": "#000000", "backgroundColor": "#ff000010" },                        // :
+                { "color": "#000000", "backgroundColor": "#ff000010" },                        // description
+            ],
+        },
+
         // D: make D class destructor italic, syntax highlighting doesn't match it as destructor
         "(?<!static )(\\~this)\\(\\)": {
             "filterLanguageRegex": "^d$",
@@ -247,6 +302,17 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
             "decorations": [ {}, { "color": "#0057ae", "fontWeight": "bold" }, {}, {}, { "color": "#808000" } ]
         },
         "(\\-[\\s]?)(#[ ]*?)(\\bfrozen\\_string\\_literal\\b)(\\:)([ ]*?)(\\btrue\\b|\\bfalse\\b)$": {
+            "filterLanguageRegex": "^slim\\-lang$|^slim$",
+            "regexFlags": "gm",
+            "decorations": [ {}, {}, { "color": "#0057ae", "fontWeight": "bold" }, {}, {}, { "color": "#808000" } ]
+        },
+        // Ruby+Sorbet: "typed" comment
+        "(#[ ]*?)(\\btyped\\b)(\\:)([ ]*?)(\\btrue\\b|\\bfalse\\b|\\bignore\\b|\\bstrict\\b|\\bstrong\\b)$": {
+            "filterLanguageRegex": "^ruby$",
+            "regexFlags": "gm",
+            "decorations": [ {}, { "color": "#0057ae", "fontWeight": "bold" }, {}, {}, { "color": "#808000" } ]
+        },
+        "(\\-[\\s]?)(#[ ]*?)(\\btyped\\b)(\\:)([ ]*?)(\\btrue\\b|\\bfalse\\b|\\bignore\\b|\\bstrict\\b|\\bstrong\\b)$": {
             "filterLanguageRegex": "^slim\\-lang$|^slim$",
             "regexFlags": "gm",
             "decorations": [ {}, {}, { "color": "#0057ae", "fontWeight": "bold" }, {}, {}, { "color": "#808000" } ]
@@ -439,12 +505,12 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         "(^\\+[^+])(.*)": {
             "filterLanguageRegex": "^diff$",
             "regexFlags": "gm",
-            "decorations": [ {}, { "backgroundColor": /*"#006e2808"*/"#6cd8ff40", "isWholeLine": true } ]
+            "decorations": [ {}, { "backgroundColor": "#6dffa250"/*"#6cd8ff40"*/, "isWholeLine": true } ]
         },
         "(^\\-[^-])(.*)": {
             "filterLanguageRegex": "^diff$",
             "regexFlags": "gm",
-            "decorations": [ {}, { "backgroundColor": /*"#bf030308"*/"#fbfe3760", "isWholeLine": true } ]
+            "decorations": [ {}, { "backgroundColor": "#ff6d6d50"/*"#fbfe3760"*/, "isWholeLine": true } ]
         },
         // Slim: code line
         "(^[ ]*?)([-=])([^-=])(.*?$)": {
@@ -464,8 +530,37 @@ Install `fabiospampinato.vscode-highlight` and add this to your `settings.json`:
         },
         // JavaScript/TypeScript: special object functions available almost everywhere
         "(?<!\\/\\/.*?)(\\.)(length|prototype|constructor)([\\s\\(\\)\\[\\]\\{\\},;\\.\\+\\-\\|\\&]|$)": {
-            "filterLanguageRegex": "^javascript$|^typescript%",
+            "filterLanguageRegex": "^javascript$|^typescript$|^vue$",
             "decorations": [ {}, { "color": "#0057ae" }, {} ]
+        },
+        // TypeScript: @ts-ignore and @ts-expect-error with highlighted comment
+        "([\\b\\s\\/])(\\@ts\\-ignore\\b|\\@ts\\-expect\\-error\\b)(.*)": {
+            "filterLanguageRegex": "^typescript$|^vue$",
+            "decorations": [ {}, { "color": "#0057ae", "fontWeight": "bold" }, { "color": "#9c6a6a" } ]
+        },
+        // Vue: @vue-generic
+        "(<!--\\s*)(@vue-generic)(\\s*)(\\{)\\s*([^}]*?)(\\s*)(\\})(\\s*-->)": {
+            "filterLanguageRegex": "^vue$",
+            "decorations": [
+                {},
+                { "color": "#0057ae", "fontWeight": "bold" }, // #42B883 vue brand color
+                {},
+                { "color": "#000000" },
+                { "color": "#7A7A00" }, // #8D268F
+                {},
+                { "color": "#000000" },
+                {},
+            ],
+        },
+        // Go: docstrings [identifier]
+        "(\\/\\/.*?)(.*?)(\\[.*?\\])": {
+            "filterLanguageRegex": "^go$", "decorations": [{}, {}, { "color": "#000000" }]},
+        "(\\/\\/.*?)(.*?)(\\[.*?\\])(.*?)(\\[.*?\\])": {
+            "filterLanguageRegex": "^go$", "decorations": [{}, {}, { "color": "#000000" }, {}, { "color": "#000000" }]},
+        // Go: @param doc
+        "(\\/\\/.*?)(@param\\b)(\\s+)(\\b\\w+\\b)": {
+            "filterLanguageRegex": "^go$",
+            "decorations": [ {}, { "color": "#0000FF" }, {}, { "color": "#000000" } ],
         },
         // Security: code evaluation function
         "(\\beval\\b)": { // (?<!#.*?) also show when commented out
